@@ -11,6 +11,7 @@ import AllProducts from "./components/AllProducts/AllProducts";
 import Account from "./components/Account/Account";
 import MyShoes from "./components/MyShoes/MyShoes";
 import Profile from "./components/Profile/Profile";
+import Impressum from "./components/Impressum/Impressum";
 
 function App() {
   return (
@@ -49,6 +50,9 @@ function App() {
           </Route>
           <Route path="/profile">
             <Profile />
+          </Route>
+          <Route path="/impressum">
+            <Impressum />
           </Route>
         </Switch>
       </Router>
