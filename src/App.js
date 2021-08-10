@@ -15,6 +15,7 @@ import Impressum from "./components/Impressum/Impressum";
 import Shipping from "./components/Shipping/Shipping";
 import Contact from "./components/Contact/Contact";
 import Privacy from "./components/Privacy/Privacy";
+import Conditions from "./components/Conditions/Conditions";
 
 function App() {
   return (
@@ -65,6 +66,9 @@ function App() {
           </Route>
           <Route path="/privacy">
             <Privacy />
+          </Route>
+          <Route path="/conditions">
+            <Conditions />
           </Route>
         </Switch>
       </Router>
