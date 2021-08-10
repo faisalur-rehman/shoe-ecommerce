@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import mobileLogo from "../../image/mobile_logo.png";
 import sneaker from "../../image/sneaker_one.png";
+import Sidebar from "../Sidebar/Sidebar";
 import "./AllProducts.css";
 
 const AllProducts = () => {
@@ -15,33 +16,7 @@ const AllProducts = () => {
     <div>
       <section id="greater_then_mobile">
         <section class="sneaker_form_page_section">
-          <header>
-            <div class="nav_plus_shooping">
-              <div class="nav_icon">
-                <a class="open_close_nav">
-                  <i class="fas fa-bars" onClick={handleClick}></i>
-                </a>
-              </div>
-              <div class="shopping_cart">
-                <i class="fas fa-shopping-bag"></i>
-              </div>
-            </div>
-            <div class="logo">
-              <span>REACH YOUR</span>
-              <span class="logo_middle_part">
-                <a href="index.html">
-                  <small>R</small>
-                  <small>Y</small>
-                  <small>H</small>
-                  <small>L</small>
-                </a>
-              </span>
-              <span>HIGHEST LEVEL</span>
-            </div>
-            <div class="insta_icon">
-              <i class="fab fa-instagram"></i>
-            </div>
-          </header>
+          <Sidebar />
 
           <section class="sneaker_form_body_section">
             <div class="sneaker_form_container">

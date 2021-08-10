@@ -8,6 +8,7 @@ import Payment from "./components/Payment/Payment";
 import Signup from "./components/Signup/Signup";
 import Signin from "./components/Signin/Signin";
 import AllProducts from "./components/AllProducts/AllProducts";
+import Account from "./components/Account/Account";
 
 function App() {
   return (
@@ -37,6 +38,9 @@ function App() {
           </Route>
           <Route path="/allProducts">
             <AllProducts />
+          </Route>
+          <Route path="/account">
+            <Account />
           </Route>
         </Switch>
       </Router>

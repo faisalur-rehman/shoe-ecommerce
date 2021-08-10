@@ -10,7 +10,7 @@ const Sidebar = () => {
     setstate("");
   }
   return (
-    <div>
+    <>
       <header>
         <div class="nav_plus_shooping">
           <div class="nav_icon">
@@ -42,7 +42,7 @@ const Sidebar = () => {
         <section class="responsive_nav_page_section">
           <div class="responsive_header">
             <div class="responsive_nav_icon">
-              <a class="open_close_nav" href="#" onClick={handleClose}>
+              <a class="open_close_nav" onClick={handleClose}>
                 <i class="fas fa-times"></i>
               </a>
             </div>
@@ -74,18 +74,16 @@ const Sidebar = () => {
                 <Link to="/raffle">RAFFLE</Link>
               </span>
               <span>
-                {" "}
-                <a href="sneaker.html">SNEAKERS</a>
+                <Link to="/allProducts">SNEAKERS</Link>
               </span>
               <span>
-                {" "}
-                <a href="sign_up.html">Sign up</a>
+                <Link to="/signup">Sign up</Link>
               </span>
               <span>
-                <a href="account_setting.html">Account</a>
+                <Link to="/account">Account</Link>
               </span>
               <span>
-                <a href="login.html">login</a>
+                <Link to="/login">login</Link>
               </span>
             </div>
             <div class="responsive_nav_details_secion_two">
@@ -114,7 +112,7 @@ const Sidebar = () => {
           </section>
         </section>
       </section>
-    </div>
+    </>
   );
 };
 
