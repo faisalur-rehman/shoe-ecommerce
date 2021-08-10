@@ -20,9 +20,9 @@ const Raffle = () => {
           <header>
             <div class="nav_plus_shooping">
               <div class="nav_icon">
-                <a class="open_close_nav">
+                <Link class="open_close_nav">
                   <i class="fas fa-bars" onClick={handleClick}></i>
-                </a>
+                </Link>
               </div>
               <div class="shopping_cart">
                 <i class="fas fa-shopping-bag"></i>
@@ -81,9 +81,9 @@ const Raffle = () => {
             </a>
           </div>
           <div class="nav_icon">
-            <a class="open_close_nav">
+            <Link class="open_close_nav">
               <i class="fas fa-bars" onClick={handleClick}></i>
-            </a>
+            </Link>
           </div>
         </div>
 
