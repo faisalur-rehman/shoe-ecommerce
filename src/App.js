@@ -13,6 +13,7 @@ import MyShoes from "./components/MyShoes/MyShoes";
 import Profile from "./components/Profile/Profile";
 import Impressum from "./components/Impressum/Impressum";
 import Shipping from "./components/Shipping/Shipping";
+import Contact from "./components/Contact/Contact";
 
 function App() {
   return (
@@ -57,6 +58,9 @@ function App() {
           </Route>
           <Route path="/shipping">
             <Shipping />
+          </Route>
+          <Route path="/contact">
+            <Contact />
           </Route>
         </Switch>
       </Router>
