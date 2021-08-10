@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Sidebar from "../Sidebar/Sidebar";
 import "./Impressum.css";
 import mobileLogo from "../../image/mobile_logo.png";
+import { Link } from "react-router-dom";
 
 const Impressum = () => {
   const [state, setstate] = useState("");
@@ -19,7 +20,7 @@ const Impressum = () => {
 
           <div class="impressum_footer_section_one">
             <div class="impressum_footer_section_one_list">
-              <a href="impressum.html">impressum</a>
+              <Link to="/impressum">impressum</Link>
             </div>
           </div>
 
@@ -68,10 +69,10 @@ const Impressum = () => {
           <div class="impressum_footer_section_two">
             <div class="impressum_footer">
               <div class="impressum_footer_list_two">
-                <a href="shipping.html">shipping</a>
+                <Link to="/shipping">shipping</Link>
               </div>
               <div class="impressum_footer_list_two">
-                <a href="contact.html">contact</a>
+                <Link to="/contact">contact</Link>
               </div>
             </div>
           </div>
