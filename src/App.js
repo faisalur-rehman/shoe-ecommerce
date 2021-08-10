@@ -10,6 +10,7 @@ import Signin from "./components/Signin/Signin";
 import AllProducts from "./components/AllProducts/AllProducts";
 import Account from "./components/Account/Account";
 import MyShoes from "./components/MyShoes/MyShoes";
+import Profile from "./components/Profile/Profile";
 
 function App() {
   return (
@@ -45,6 +46,9 @@ function App() {
           </Route>
           <Route path="/myshoes">
             <MyShoes />
+          </Route>
+          <Route path="/profile">
+            <Profile />
           </Route>
         </Switch>
       </Router>

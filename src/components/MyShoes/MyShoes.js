@@ -26,13 +26,13 @@ const MyShoes = () => {
               </div>
               <div class="myshoes_nav">
                 <div class="myshoes_nav_list">
-                  <a href="account_setting.html">setting</a>
+                  <Link to="/account">setting</Link>
                 </div>
                 <div class="myshoes_nav_list">
-                  <a href="myshoes.html">my shoes</a>
+                  <Link to="/myshoes">my shoes</Link>
                 </div>
                 <div class="myshoes_nav_list">
-                  <a href="profile.html">profile</a>
+                  <Link to="/profile">profile</Link>
                 </div>
               </div>
             </div>
