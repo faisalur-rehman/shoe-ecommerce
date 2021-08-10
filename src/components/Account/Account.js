@@ -24,13 +24,13 @@ const Account = () => {
             </div>
             <div class="setting_nav">
               <div class="setting_nav_list">
-                <a href="account_setting.html">setting</a>
+                <Link to="/account">setting</Link>
               </div>
               <div class="setting_nav_list">
-                <a href="myshoes.html">my shoes</a>
+                <Link to="/myshoes">my shoes</Link>
               </div>
               <div class="setting_nav_list">
-                <a href="profile.html">profile</a>
+                <Link to="/profile">profile</Link>
               </div>
             </div>
           </div>
@@ -106,13 +106,13 @@ const Account = () => {
           </div>
           <div class="setting_nav">
             <div class="setting_nav_list">
-              <a href="account_setting.html">setting</a>
+              <Link to="/account">setting</Link>
             </div>
             <div class="setting_nav_list">
-              <a href="myshoes.html">my shoes</a>
+              <Link to="/myshoes">my shoes</Link>
             </div>
             <div class="setting_nav_list">
-              <a href="profile.html">profile</a>
+              <Link to="/profile">profile</Link>
             </div>
           </div>
         </div>
