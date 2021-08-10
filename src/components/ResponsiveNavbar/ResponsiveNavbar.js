@@ -8,9 +8,9 @@ const ResponsiveNavbar = ({ state, handleClose }) => {
         <section class="responsive_nav_page_section">
           <div class="responsive_header">
             <div class="responsive_nav_icon">
-              <a class="open_close_nav">
+              <Link class="open_close_nav">
                 <i class="fas fa-times" onClick={handleClose}></i>
-              </a>
+              </Link>
             </div>
 
             <div class="responsive_logo">
