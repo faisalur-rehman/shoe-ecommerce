@@ -16,12 +16,12 @@ const ResponsiveNavbar = ({ state, handleClose }) => {
             <div class="responsive_logo">
               <span>REACH YOUR</span>
               <span class="responsive_logo_middle_part">
-                <a href="index.html">
+                <Link to="/">
                   <small>R</small>
                   <small>Y</small>
                   <small>H</small>
                   <small>L</small>
-                </a>
+                </Link>
               </span>
               <span>HIGHEST LEVEL</span>
             </div>
@@ -41,40 +41,40 @@ const ResponsiveNavbar = ({ state, handleClose }) => {
               </span>
               <span>
                 {" "}
-                <a href="sneaker.html">SNEAKERS</a>
+                <Link to="/allProducts">SNEAKERS</Link>
               </span>
               <span>
                 {" "}
-                <a href="sign_up.html">Sign up</a>
+                <Link to="/signup">Sign up</Link>
               </span>
               <span>
                 {" "}
-                <a href="account_setting.html">Account</a>
+                <Link to="/account">Account</Link>
               </span>
               <span>
-                <a href="login.html">login</a>
+                <Link to="/login">login</Link>
               </span>
             </div>
             <div class="responsive_nav_details_secion_two">
               <ul>
                 <li>
-                  <a href="impressum.html">IMPRESSUM</a>
+                  <Link to="/impressum">IMPRESSUM</Link>
                 </li>
                 <li>
-                  <a href="shipping.html">SHIPPING</a>
+                  <Link to="/shipping">SHIPPING</Link>
                 </li>
                 <li>
-                  <a href="contact.html">CONTACT</a>
+                  <Link to="/contact">CONTACT</Link>
                 </li>
               </ul>
             </div>
             <div class="responsive_nav_details_secion_three">
               <ul>
                 <li>
-                  <a href="privacy.html">privacy</a>
+                  <Link to="/privacy">privacy</Link>
                 </li>
                 <li>
-                  <a href="agb.html">agb</a>
+                  <Link to="/conditions">agb</Link>
                 </li>
               </ul>
             </div>
