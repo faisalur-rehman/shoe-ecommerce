@@ -17,7 +17,11 @@ const AllProducts = () => {
     <div>
       <section id="greater_then_mobile">
         <section class="sneaker_form_page_section">
-          <Sidebar />
+          <Sidebar
+            state={state}
+            handleClick={handleClick}
+            handleClose={handleClose}
+          />
 
           <section class="sneaker_form_body_section">
             <div class="sneaker_form_container">
@@ -283,7 +287,7 @@ const AllProducts = () => {
         </section>
       </section>
 
-      <section class={`responsive_nav_bar ${state}`}>
+      {/* <section class={`responsive_nav_bar ${state}`}>
         <section class="responsive_nav_page_section">
           <div class="responsive_header">
             <div class="responsive_nav_icon">
@@ -359,7 +363,7 @@ const AllProducts = () => {
             </div>
           </section>
         </section>
-      </section>
+      </section> */}
     </div>
   );
 };

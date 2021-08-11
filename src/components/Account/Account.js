@@ -17,7 +17,11 @@ const Account = () => {
     <div>
       <section id="greater_then_mobile">
         <section class="setting_page_section">
-          <Sidebar />
+          <Sidebar
+            state={state}
+            handleClick={handleClick}
+            handleClose={handleClose}
+          />
 
           <div class="setting_nav_section">
             <div class="setting_page_list">

@@ -4,6 +4,7 @@ import mobileLogo from "../../image/mobile_logo.png";
 import AppForm from "../AppForm/AppForm";
 import ResponsiveNavbar from "../ResponsiveNavbar/ResponsiveNavbar";
 import { Field } from "formik";
+import { Link } from "react-router-dom";
 
 const SigninForm = ({ initialValues, handleSubmit, response, error }) => {
   const [state, setstate] = useState("");
@@ -121,11 +122,11 @@ function FormFields({ state, handleClose, handleClick, response, error }) {
               <div class="login_fields">
                 <div class="input_field">
                   <label>mail</label>
-                  <input type="email" placeholder="" />
+                  <Field name="email" type="email" placeholder="" />
                 </div>
                 <div class="input_field">
                   <label>Password</label>
-                  <input type="password" placeholder="" />
+                  <Field name="password" type="password" placeholder="" />
                 </div>
                 <div class="forget_password">
                   <span>forgot password?</span>
@@ -137,7 +138,7 @@ function FormFields({ state, handleClose, handleClick, response, error }) {
                   <span>new to ryhl?</span>
                 </div>
                 <div class="submit_btn">
-                  <a href="sign_up.html">create account</a>
+                  <Link to="signup">create account</Link>
                 </div>
               </div>
             </div>

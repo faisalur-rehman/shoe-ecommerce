@@ -16,10 +16,12 @@ const Signin = () => {
     console.log("values", formValues);
 
     try {
-      const data = await request({
+      const { data } = await request({
         ...formValues,
       });
       console.log("data", data);
+      localStorage.setItem("token", data.token);
+      localStorage.setItem("isAdmin", data.isAdmin);
       data && history.push("/");
     } catch (error) {
       console.log(error.response);

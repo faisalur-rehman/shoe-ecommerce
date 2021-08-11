@@ -135,19 +135,23 @@ function FormFields({ state, handleClose, handleClick, response, error }) {
               <div class="sign_up_fields">
                 <div class="sign_up_input_field">
                   <label>full name</label>
-                  <input type="text" placeholder="" />
+                  <Field name="name" type="text" placeholder="" />
                 </div>
                 <div class="sign_up_input_field">
                   <label>mail</label>
-                  <input type="email" placeholder="" />
+                  <Field name="email" type="email" placeholder="" />
                 </div>
                 <div class="sign_up_input_field">
                   <label>Password</label>
-                  <input type="password" placeholder="" />
+                  <Field name="password" type="password" placeholder="" />
                 </div>
                 <div class="sign_up_input_field">
                   <label>confirm password</label>
-                  <input type="password" placeholder="" />
+                  <Field
+                    name="confirmPassword"
+                    type="password"
+                    placeholder=""
+                  />
                 </div>
                 <div class="sign_up_remember_me">
                   <input type="checkbox" />
@@ -160,7 +164,7 @@ function FormFields({ state, handleClose, handleClick, response, error }) {
                   <span>already have a account?</span>
                 </div>
                 <div class="sign_up_submit_btn sign_up_page_login">
-                  <a href="login.html">Login</a>
+                  <Link to="/signin">Login</Link>
                 </div>
               </div>
             </div>

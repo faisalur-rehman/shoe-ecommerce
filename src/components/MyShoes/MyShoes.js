@@ -17,7 +17,11 @@ const MyShoes = () => {
     <>
       <section id="greater_then_mobile">
         <section class="myshoes_page_section">
-          <Sidebar />
+          <Sidebar
+            state={state}
+            handleClick={handleClick}
+            handleClose={handleClose}
+          />
 
           <section class="myshoes_body">
             <div class="myshoes_nav_section">

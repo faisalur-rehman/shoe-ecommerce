@@ -8,7 +8,6 @@ import Payment from "./components/Payment/Payment";
 import AllProducts from "./components/AllProducts/AllProducts";
 import Account from "./components/Account/Account";
 import MyShoes from "./components/MyShoes/MyShoes";
-import Profile from "./components/Profile/Profile";
 import Impressum from "./components/Impressum/Impressum";
 import Shipping from "./components/Shipping/Shipping";
 import Contact from "./components/Contact/Contact";
@@ -17,6 +16,7 @@ import Conditions from "./components/Conditions/Conditions";
 import SliderComponent from "./components/Slider/Slider";
 import Signup from "./components/Signup/Signup";
 import Signin from "./components/Signin/Signin";
+import Profile from "./components/Profile/Profile";
 
 function App() {
   return (

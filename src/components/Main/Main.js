@@ -1,10 +1,17 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import homeBanner from "../../image/home_banner.png";
 import homeArrow from "../../image/home_page_arrow.png";
 import mobileLogo from "../../image/mobile_logo.png";
 import Sidebar from "../Sidebar/Sidebar";
 
 const Main = () => {
+  const [state, setstate] = useState("");
+  function handleClick() {
+    setstate("responsive_bar");
+  }
+  function handleClose() {
+    setstate("");
+  }
   useEffect(() => {
     const reloadCount = sessionStorage.getItem("reloadCount");
     if (reloadCount < 2) {
@@ -26,7 +33,11 @@ const Main = () => {
       </section>
       <section id="greater_then_mobile">
         <section class="home_page_section">
-          <Sidebar />
+          <Sidebar
+            state={state}
+            handleClick={handleClick}
+            handleClose={handleClose}
+          />
 
           <div class="slide_container">
             <section class="home_page_body">
@@ -87,7 +98,7 @@ const Main = () => {
           </div>
           <div class="nav_icon">
             <a class="open_close_nav">
-              <i class="fas fa-bars"></i>
+              <i class="fas fa-bars" onClick={handleClick}></i>
             </a>
           </div>
         </div>
