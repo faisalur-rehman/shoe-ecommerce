@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import mobileLogo from "../../image/mobile_logo.png";
 import sneaker from "../../image/sneaker_one.png";
 import Sidebar from "../Sidebar/Sidebar";
+import SliderComponent from "../Slider/Slider";
 import "./AllProducts.css";
 
 const AllProducts = () => {
@@ -23,7 +24,9 @@ const AllProducts = () => {
               <div class="sneaker_section_heading">
                 <h3>sneakers</h3>
               </div>
-              <div
+              <SliderComponent />
+
+              {/* <div
                 id="carouselExampleControls"
                 class="carousel slide"
                 data-ride="carousel"
@@ -135,7 +138,7 @@ const AllProducts = () => {
                     <span class="sr-only">Next</span>
                   </a>
                 </div>
-              </div>
+              </div> */}
             </div>
           </section>
         </section>
@@ -148,7 +151,7 @@ const AllProducts = () => {
           </div>
           <div class="logo">
             <a href="index.html">
-              <img src={mobileLogo} />
+              <img src={mobileLogo} alt="" />
             </a>
           </div>
           <div class="nav_icon">
@@ -194,21 +197,21 @@ const AllProducts = () => {
                     </div>
                     <div class="single_sneaker">
                       <a href="single_sneaker.html">
-                        <img src={sneaker} />
+                        <img src={sneaker} alt="" />
                       </a>
                       <p>Jordan 1 Retro High Dior</p>
                       <small> 7.800 chf</small>
                     </div>
                     <div class="single_sneaker">
                       <a href="single_sneaker.html">
-                        <img src={sneaker} />
+                        <img src={sneaker} alt="" />
                       </a>
                       <p>Jordan 1 Retro High Dior</p>
                       <small> 7.800 chf</small>
                     </div>
                     <div class="single_sneaker">
                       <a href="single_sneaker.html">
-                        <img src={sneaker} />
+                        <img src={sneaker} alt="" />
                       </a>
                       <p>Jordan 1 Retro High Dior</p>
                       <small> 7.800 chf</small>
@@ -219,42 +222,42 @@ const AllProducts = () => {
                   <section class="sneakers_list">
                     <div class="single_sneaker">
                       <a href="single_sneaker.html">
-                        <img src={sneaker} />
+                        <img src={sneaker} alt="" />
                       </a>
                       <p>Jordan 1 Retro High Dior</p>
                       <small> 7.800 chf</small>
                     </div>
                     <div class="single_sneaker">
                       <a href="single_sneaker.html">
-                        <img src={sneaker} />
+                        <img src={sneaker} alt="" />
                       </a>
                       <p>Jordan 1 Retro High Dior</p>
                       <small> 7.800 chf</small>
                     </div>
                     <div class="single_sneaker">
                       <a href="single_sneaker.html">
-                        <img src={sneaker} />
+                        <img src={sneaker} alt="" />
                       </a>
                       <p>Jordan 1 Retro High Dior</p>
                       <small> 7.800 chf</small>
                     </div>
                     <div class="single_sneaker">
                       <a href="single_sneaker.html">
-                        <img src={sneaker} />
+                        <img src={sneaker} alt="" />
                       </a>
                       <p>Jordan 1 Retro High Dior</p>
                       <small> 7.800 chf</small>
                     </div>
                     <div class="single_sneaker">
                       <a href="single_sneaker.html">
-                        <img src={sneaker} />
+                        <img src={sneaker} alt="" />
                       </a>
                       <p>Jordan 1 Retro High Dior</p>
                       <small> 7.800 chf</small>
                     </div>
                     <div class="single_sneaker">
                       <a href="single_sneaker.html">
-                        <img src={sneaker} />
+                        <img src={sneaker} alt="" />
                       </a>
                       <p>Jordan 1 Retro High Dior</p>
                       <small> 7.800 chf</small>
@@ -265,7 +268,7 @@ const AllProducts = () => {
               <div class="next_btn">
                 <a
                   class="carousel-control-next"
-                  href="#carouselExampleControls"
+                  href="#/#carouselExampleControls"
                   role="button"
                   data-slide="next"
                 >

@@ -15,7 +15,11 @@ const Sidebar = () => {
         <div class="nav_plus_shooping">
           <div class="nav_icon">
             <a class="open_close_nav">
-              <i class="fas fa-bars" onClick={handleClick}></i>
+              <i
+                class="fas fa-bars"
+                onClick={handleClick}
+                style={{ color: "black" }}
+              ></i>
             </a>
           </div>
           <div class="shopping_cart">
@@ -68,7 +72,7 @@ const Sidebar = () => {
           <section class="responsive_nav_details">
             <div class="responsive_nav_details_secion_one">
               <span>
-                <Link to="/">start</Link>
+                <a href="/">start</a>
               </span>
               <span>
                 <Link to="/raffle">RAFFLE</Link>
@@ -89,23 +93,23 @@ const Sidebar = () => {
             <div class="responsive_nav_details_secion_two">
               <ul>
                 <li>
-                  <a href="impressum.html">IMPRESSUM</a>
+                  <Link to="/impressum">IMPRESSUM</Link>
                 </li>
                 <li>
-                  <a href="shipping.html">SHIPPING</a>
+                  <Link to="/shipping">SHIPPING</Link>
                 </li>
                 <li>
-                  <a href="contact.html">CONTACT</a>
+                  <Link to="/contact">CONTACT</Link>
                 </li>
               </ul>
             </div>
             <div class="responsive_nav_details_secion_three">
               <ul>
                 <li>
-                  <a href="privacy.html">privacy</a>
+                  <Link to="/privacy">privacy</Link>
                 </li>
                 <li>
-                  <a href="agb.html">agb</a>
+                  <Link to="/conditions">agb</Link>
                 </li>
               </ul>
             </div>

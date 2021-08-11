@@ -16,6 +16,7 @@ import Shipping from "./components/Shipping/Shipping";
 import Contact from "./components/Contact/Contact";
 import Privacy from "./components/Privacy/Privacy";
 import Conditions from "./components/Conditions/Conditions";
+import SliderComponent from "./components/Slider/Slider";
 
 function App() {
   return (
@@ -69,6 +70,9 @@ function App() {
           </Route>
           <Route path="/conditions">
             <Conditions />
+          </Route>
+          <Route path="/slider">
+            <SliderComponent />
           </Route>
         </Switch>
       </Router>
