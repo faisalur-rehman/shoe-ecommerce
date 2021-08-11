@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import homeBanner from "../../image/home_banner.png";
 import homeArrow from "../../image/home_page_arrow.png";
 import mobileLogo from "../../image/mobile_logo.png";
 import Sidebar from "../Sidebar/Sidebar";
 
 const Main = () => {
+  useEffect(() => {
+    const reloadCount = sessionStorage.getItem("reloadCount");
+    if (reloadCount < 2) {
+      sessionStorage.setItem("reloadCount", String(reloadCount + 1));
+      window.location.reload();
+    } else {
+      sessionStorage.removeItem("reloadCount");
+    }
+  }, []);
   return (
     <div>
       <section class="loading_secreen" id="loader">

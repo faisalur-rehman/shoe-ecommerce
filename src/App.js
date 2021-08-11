@@ -5,7 +5,6 @@ import Raffle from "./components/Raffle/Raffle";
 import RaffleForm from "./components/RaffleForm/RaffleForm";
 import ProductRaffle from "./components/ProductRaffle/ProductRaffle";
 import Payment from "./components/Payment/Payment";
-import Signin from "./components/Signin/Signin";
 import AllProducts from "./components/AllProducts/AllProducts";
 import Account from "./components/Account/Account";
 import MyShoes from "./components/MyShoes/MyShoes";
@@ -17,6 +16,7 @@ import Privacy from "./components/Privacy/Privacy";
 import Conditions from "./components/Conditions/Conditions";
 import SliderComponent from "./components/Slider/Slider";
 import Signup from "./components/Signup/Signup";
+import Signin from "./components/Signin/Signin";
 
 function App() {
   return (
