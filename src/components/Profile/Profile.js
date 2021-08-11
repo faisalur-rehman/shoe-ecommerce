@@ -39,8 +39,6 @@ const Profile = () => {
       await updateProfile.request({
         ...formValues,
       });
-      // console.log("update profile", data);
-      // data && history.push("/");
     } catch (error) {
       console.log(error.response);
     }
