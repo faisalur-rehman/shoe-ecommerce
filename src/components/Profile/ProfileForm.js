@@ -7,7 +7,15 @@ import ResponsiveNavbar from "../ResponsiveNavbar/ResponsiveNavbar";
 import AppForm from "../AppForm/AppForm";
 import { Field } from "formik";
 
-const ProfileForm = ({ initialValues, handleSubmit, response, error }) => {
+const ProfileForm = ({
+  initialValues,
+  handleSubmit,
+  response,
+  error,
+  data,
+}) => {
+  console.log("data", data);
+  console.log("error", error);
   const [state, setstate] = useState("");
   function handleClick() {
     setstate("responsive_bar");
@@ -21,7 +29,7 @@ const ProfileForm = ({ initialValues, handleSubmit, response, error }) => {
         state={state}
         handleClose={handleClose}
         handleClick={handleClick}
-        response={response}
+        data={data}
         error={error}
       />
     </AppForm>
@@ -30,7 +38,7 @@ const ProfileForm = ({ initialValues, handleSubmit, response, error }) => {
 
 export default ProfileForm;
 
-function FormFields({ state, handleClose, handleClick, response, error }) {
+function FormFields({ state, handleClose, handleClick, data, error }) {
   return (
     <div>
       <section id="greater_then_mobile">
@@ -122,6 +130,13 @@ function FormFields({ state, handleClose, handleClick, response, error }) {
                       </Link>
                     </div>
                   </div>
+
+                  {error.data ? (
+                    <p style={{ color: "red" }}> {error.data.message}</p>
+                  ) : (
+                    <p style={{ color: "green" }}>{data && data.message}</p>
+                  )}
+
                   <div class="profile_page_input_field">
                     <button type="submit">Update Profile</button>
                   </div>

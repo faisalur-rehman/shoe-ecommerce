@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import useApi from "../../hooks/useApi";
 import ProfileForm from "./ProfileForm";
 import * as api from "../../api/api";
-import { useHistory } from "react-router-dom";
 
 const initialValues = {
   name: "",
@@ -15,7 +14,6 @@ const Profile = () => {
   const [, setValue] = useState();
   const getProfile = useApi(api.getProfile);
   const updateProfile = useApi(api.updateProfile);
-  const history = useHistory();
 
   useEffect(() => {
     async function fetchData() {
@@ -38,10 +36,10 @@ const Profile = () => {
     console.log("values", formValues);
 
     try {
-      const { data } = await updateProfile.request({
+      await updateProfile.request({
         ...formValues,
       });
-      console.log("update profile", data);
+      // console.log("update profile", data);
       // data && history.push("/");
     } catch (error) {
       console.log(error.response);
@@ -49,7 +47,12 @@ const Profile = () => {
   }
   return (
     <div>
-      <ProfileForm handleSubmit={handleSubmit} initialValues={initialValues} />
+      <ProfileForm
+        handleSubmit={handleSubmit}
+        initialValues={initialValues}
+        data={updateProfile.data}
+        error={updateProfile.error}
+      />
     </div>
   );
 };
