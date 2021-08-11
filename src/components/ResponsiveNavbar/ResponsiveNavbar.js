@@ -51,7 +51,7 @@ const ResponsiveNavbar = ({ state, handleClose }) => {
               <Link to="/account">Account</Link>
             </span>
             <span>
-              <Link to="/login">login</Link>
+              <Link to="/signin">login</Link>
             </span>
           </div>
           <div class="responsive_nav_details_secion_two">

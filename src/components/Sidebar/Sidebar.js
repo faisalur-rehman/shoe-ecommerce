@@ -35,7 +35,7 @@ const Sidebar = ({ state, handleClick, handleClose }) => {
           <i class="fab fa-instagram"></i>
         </div>
       </header>
-      <ResponsiveNavbar />
+      <ResponsiveNavbar handleClose={handleClose} state={state} />
     </>
   );
 };
