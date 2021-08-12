@@ -163,20 +163,18 @@ header .insta_icon i {
   max-width: 430px;
   margin: 0 auto;
 }
-.raffle_purchase_form form .raffle_purchase_form_fields {
+.raffle_purchase_form .raffle_purchase_form_fields {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
 .raffle_purchase_form
-  form
   .raffle_purchase_form_fields
   .raffle_purchase_form_input_field {
   width: 100%;
 }
 .raffle_purchase_form
-  form
   .raffle_purchase_form_fields
   .raffle_purchase_form_input_field
   label {
@@ -190,7 +188,6 @@ header .insta_icon i {
   text-align: left;
 }
 .raffle_purchase_form
-  form
   .raffle_purchase_form_fields
   .raffle_purchase_form_input_field
   input {
@@ -209,7 +206,6 @@ header .insta_icon i {
 }
 
 .raffle_purchase_form
-  form
   .raffle_purchase_form_fields
   .raffle_purchase_form_submit_btn {
   display: flex;
@@ -219,7 +215,6 @@ header .insta_icon i {
   width: 100%;
 }
 .raffle_purchase_form
-  form
   .raffle_purchase_form_fields
   .raffle_purchase_form_submit_btn
   button {

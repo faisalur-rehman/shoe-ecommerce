@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import ResponsiveNavbar from "../ResponsiveNavbar/ResponsiveNavbar";
 
 const RaffleScreen = ({ data }) => {
-  // console.log("raffle", data.articles);
   const [state, setstate] = useState("");
   function handleClick() {
     setstate("responsive_bar");
