@@ -32,7 +32,8 @@ const SingleProduct = () => {
         ...formValues,
         articleId: id,
       });
-      console.log("data", data.newOrderHistory._id);
+      console.log("data", data.client_secret);
+      localStorage.setItem("cs", data.client_secret);
       history.push(`/payment/${data.newOrderHistory._id}`);
     } catch (_) {}
   }
