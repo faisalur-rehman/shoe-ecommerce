@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
-import sneaker from "../../image/sneaker_one.png";
 
 const SliderComponent = ({ data }) => {
   console.log("data", data);

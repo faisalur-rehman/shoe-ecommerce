@@ -13,7 +13,6 @@ const initialValues = {
   city: "",
   country: "",
   gender: "",
-  size: "",
 };
 
 const RaffleForm = () => {

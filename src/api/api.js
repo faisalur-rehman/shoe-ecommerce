@@ -37,5 +37,8 @@ export function getRaffle() {
   return api.get(`/article/get-raffle`, config);
 }
 export function getSingleArticle(data) {
-  return api.post(`/article/get-single`, { ...data });
+  return api.post(`/article/get-single`, { ...data }, config);
+}
+export function createOrder(data) {
+  return api.post(`/order-history/add`, { ...data }, config);
 }

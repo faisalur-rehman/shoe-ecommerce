@@ -2,8 +2,13 @@ import React, { useState } from "react";
 import sneaker from "../../image/sneaker_one.png";
 import mobileLogo from "../../image/mobile_logo.png";
 import "./ProductRaffle.css";
+import { Field } from "formik";
+import Sidebar from "../Sidebar/Sidebar";
+import AppForm from "../AppForm/AppForm";
+import ResponsiveNavbar from "../ResponsiveNavbar/ResponsiveNavbar";
+import { Link } from "react-router-dom";
 
-const ProductRaffle = () => {
+const ProductRaffle = ({ data, initialValues, handleSubmit, error }) => {
   const [state, setstate] = useState("");
   function handleClick() {
     setstate("responsive_bar");
@@ -12,45 +17,44 @@ const ProductRaffle = () => {
     setstate("");
   }
   return (
+    <AppForm initialValues={initialValues} handleSubmit={handleSubmit}>
+      <FormFields
+        state={state}
+        handleClose={handleClose}
+        handleClick={handleClick}
+        data={data}
+        error={error}
+      />
+    </AppForm>
+  );
+};
+
+export default ProductRaffle;
+
+function FormFields({ state, handleClose, handleClick, data, error }) {
+  console.log("error", error);
+  return (
     <div>
       <section id="greater_then_mobile">
         <section class="single_sneaker_page_section">
-          <header>
-            <div class="nav_plus_shooping">
-              <div class="nav_icon">
-                <a class="open_close_nav">
-                  <i class="fas fa-bars" onClick={handleClick}></i>
-                </a>
-              </div>
-              <div class="shopping_cart">
-                <i class="fas fa-shopping-bag"></i>
-              </div>
-            </div>
-            <div class="logo">
-              <span>REACH YOUR</span>
-              <span class="logo_middle_part">
-                <a href="index.html">
-                  <small>R</small>
-                  <small>Y</small>
-                  <small>H</small>
-                  <small>L</small>
-                </a>
-              </span>
-              <span>HIGHEST LEVEL</span>
-            </div>
-            <div class="insta_icon">
-              <i class="fab fa-instagram"></i>
-            </div>
-          </header>
+          <Sidebar
+            state={state}
+            handleClick={handleClick}
+            handleClose={handleClose}
+          />
 
           <section class="single_sneaker_body_section">
             <div class="single_sneaker_container">
               <div class="single_sneaker_section_heading">
-                <h3>jordan 1 retro high dior</h3>
+                <h3>{data.article.name}</h3>
               </div>
 
               <div class="select_single_sneaker">
-                <img class="gear" src={sneaker} alt="" />
+                <img
+                  class="gear"
+                  src={`http://localhost:8000/${data.article.image}`}
+                  alt=""
+                />
               </div>
 
               <div class="custom_scroll">
@@ -58,26 +62,42 @@ const ProductRaffle = () => {
               </div>
 
               <div class="select_single_sneaker_properties">
-                <p>STYLE AQ0818-148</p>
-                <p>COLORWAY WHITE/DARK POWDER BLUE-CONE</p>
-                <p>RELEASE-DATUM 23.06.2018</p>
+                <p>STYLE {data.article.style}</p>
+                <p>{data.article.description}</p>
+                <p>
+                  RELEASE-DATE{"  "}
+                  {new Date(data.article.releaseDate).toDateString()}
+                </p>
               </div>
-              <form>
-                <div class="select_single_sneaker_size">
-                  <h4>CHF 5’000 CHF</h4>
+              <div class="select_single_sneaker_size">
+                <h4>{data.article.price} CHF</h4>
+              </div>
+              <label>Size</label>
+              <div class="">
+                <Field as="select" name="sizeSelected" className="form-control">
+                  <option value="" selected disabled>
+                    Select
+                  </option>
+
+                  {data.article.availableSizes.map((size) => (
+                    <>
+                      <option value={size}>{size}</option>
+                    </>
+                  ))}
+                </Field>
+                <div class="raffle_purchase_form_input_field">
+                  <label>Shipping Address</label>
+                  <Field name="shippingAddress" type="text" placeholder="" />
                 </div>
-                <div class="single_sneaker_size_selecter">
-                  <select>
-                    <option value="" selected disabled>
-                      SIZE
-                    </option>
-                    <option value="CHF 5’000 CHF">CHF 5’000 CHF</option>
-                  </select>
+                <div class="raffle_purchase_form_input_field">
+                  <label>Shipping State</label>
+                  <Field name="shippingState" type="text" placeholder="" />
                 </div>
-                <div class="single_sneaker_buy_button">
-                  <a href="payment.html">add to bag</a>
-                </div>
-              </form>
+              </div>
+              <p style={{ color: "red" }}>{error.data && error.data.message}</p>
+              <div class="single_sneaker_buy_button">
+                <button type="submit">Add to bag</button>
+              </div>
             </div>
           </section>
         </section>
@@ -137,85 +157,7 @@ const ProductRaffle = () => {
         </section>
       </section>
 
-      <section class={`responsive_nav_bar ${state}`}>
-        <section class="responsive_nav_page_section">
-          <div class="responsive_header">
-            <div class="responsive_nav_icon">
-              <a class="open_close_nav">
-                <i class="fas fa-times" onClick={handleClose}></i>
-              </a>
-            </div>
-
-            <div class="responsive_logo">
-              <span>REACH YOUR</span>
-              <span class="responsive_logo_middle_part">
-                <a href="index.html">
-                  <small>R</small>
-                  <small>Y</small>
-                  <small>H</small>
-                  <small>L</small>
-                </a>
-              </span>
-              <span>HIGHEST LEVEL</span>
-            </div>
-
-            <div class="responsive_insta_icon">
-              <i class="fab fa-instagram"></i>
-            </div>
-          </div>
-
-          <section class="responsive_nav_details">
-            <div class="responsive_nav_details_secion_one">
-              <span>
-                <a href="index.html">start</a>
-              </span>
-              <span>
-                <a href="raffle.html">RAFFLE</a>
-              </span>
-              <span>
-                {" "}
-                <a href="sneaker.html">SNEAKERS</a>
-              </span>
-              <span>
-                {" "}
-                <a href="sign_up.html">Sign up</a>
-              </span>
-              <span>
-                {" "}
-                <a href="account_setting.html">Account</a>
-              </span>
-              <span>
-                <a href="login.html">login</a>
-              </span>
-            </div>
-            <div class="responsive_nav_details_secion_two">
-              <ul>
-                <li>
-                  <a href="impressum.html">IMPRESSUM</a>
-                </li>
-                <li>
-                  <a href="shipping.html">SHIPPING</a>
-                </li>
-                <li>
-                  <a href="contact.html">CONTACT</a>
-                </li>
-              </ul>
-            </div>
-            <div class="responsive_nav_details_secion_three">
-              <ul>
-                <li>
-                  <a href="privacy.html">privacy</a>
-                </li>
-                <li>
-                  <a href="agb.html">agb</a>
-                </li>
-              </ul>
-            </div>
-          </section>
-        </section>
-      </section>
+      <ResponsiveNavbar state={state} handleClose={handleClose} />
     </div>
   );
-};
-
-export default ProductRaffle;
+}

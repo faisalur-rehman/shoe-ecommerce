@@ -1,7 +1,6 @@
 import "./App.css";
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import Main from "./components/Main/Main";
-import ProductRaffle from "./components/ProductRaffle/ProductRaffle";
 import Payment from "./components/Payment/Payment";
 import MyShoes from "./components/MyShoes/MyShoes";
 import Impressum from "./components/Impressum/Impressum";
@@ -17,6 +16,7 @@ import Account from "./components/Account/Account";
 import Products from "./components/AllProducts/Products";
 import Raffle from "./components/Raffle/Raffle";
 import RaffleForm from "./components/RaffleForm/RaffleForm";
+import SingleProduct from "./components/ProductRaffle/SingleProduct";
 
 function App() {
   return (
@@ -33,9 +33,9 @@ function App() {
             <RaffleForm />
           </Route>
           <Route path="/raffle-product/:id">
-            <ProductRaffle />
+            <SingleProduct />
           </Route>
-          <Route path="/payment">
+          <Route path="/payment/:id">
             <Payment />
           </Route>
           <Route path="/signup">
