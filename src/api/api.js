@@ -42,3 +42,9 @@ export function getSingleArticle(data) {
 export function createOrder(data) {
   return api.post(`/order-history/add`, { ...data }, config);
 }
+export function getSingleOrder(data) {
+  return api.post(`/order-history/get-single`, { ...data }, config);
+}
+export function confirmPayment(data) {
+  return api.patch(`/order-history/confirm-payment`, { ...data }, config);
+}

@@ -1,7 +1,6 @@
 import "./App.css";
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import Main from "./components/Main/Main";
-import Payment from "./components/Payment/Payment";
 import MyShoes from "./components/MyShoes/MyShoes";
 import Impressum from "./components/Impressum/Impressum";
 import Shipping from "./components/Shipping/Shipping";
@@ -17,6 +16,8 @@ import Products from "./components/AllProducts/Products";
 import Raffle from "./components/Raffle/Raffle";
 import RaffleForm from "./components/RaffleForm/RaffleForm";
 import SingleProduct from "./components/ProductRaffle/SingleProduct";
+import Payment from "./components/Payment/Payment";
+import StripeContainer from "./components/Stripe/StripeContainer";
 
 function App() {
   return (
@@ -73,6 +74,9 @@ function App() {
           </Route>
           <Route path="/slider">
             <SliderComponent />
+          </Route>
+          <Route path="/stripe/:id">
+            <StripeContainer />
           </Route>
         </Switch>
       </Router>
