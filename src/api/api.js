@@ -25,9 +25,17 @@ export function getProfile() {
 export function updateProfile(data) {
   return api.patch(`/user/update-profile`, { ...data }, config);
 }
-export function resetPassword(data) {
-  return api.patch(`/user/send-verification-code`, { ...data }, config);
+
+export function getArticles() {
+  return api.get(`/article/get-all`, config);
 }
+
 export function forgotPassword(data) {
   return api.patch(`/user/forget-password`, { ...data }, config);
+}
+export function getRaffle() {
+  return api.get(`/article/get-raffle`, config);
+}
+export function getSingleArticle(data) {
+  return api.post(`/article/get-single`, { ...data });
 }

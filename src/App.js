@@ -1,11 +1,9 @@
 import "./App.css";
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import Main from "./components/Main/Main";
-import Raffle from "./components/Raffle/Raffle";
 import RaffleForm from "./components/RaffleForm/RaffleForm";
 import ProductRaffle from "./components/ProductRaffle/ProductRaffle";
 import Payment from "./components/Payment/Payment";
-import AllProducts from "./components/AllProducts/AllProducts";
 import MyShoes from "./components/MyShoes/MyShoes";
 import Impressum from "./components/Impressum/Impressum";
 import Shipping from "./components/Shipping/Shipping";
@@ -17,6 +15,8 @@ import Signup from "./components/Signup/Signup";
 import Signin from "./components/Signin/Signin";
 import Profile from "./components/Profile/Profile";
 import Account from "./components/Account/Account";
+import Products from "./components/AllProducts/Products";
+import Raffle from "./components/Raffle/Raffle";
 
 function App() {
   return (
@@ -45,7 +45,7 @@ function App() {
             <Signin />
           </Route>
           <Route path="/allProducts">
-            <AllProducts />
+            <Products />
           </Route>
           <Route path="/account">
             <Account />

@@ -1,14 +1,15 @@
 import React, { useEffect } from "react";
 import useApi from "../../hooks/useApi";
-import RaffleScreen from "./RaffleScreen";
+import ProductsScreen from "./AllProductsScreen";
 import * as api from "../../api/api";
 
-const Raffle = () => {
-  const { data, request } = useApi(api.getRaffle);
+const Products = () => {
+  const { request } = useApi(api.getArticles);
   useEffect(() => {
     async function fetchData() {
       try {
-        await request();
+        const { data } = await request();
+        // console.log("profile", data);
       } catch (error) {
         console.log(error.response);
       }
@@ -18,9 +19,9 @@ const Raffle = () => {
   }, []);
   return (
     <div>
-      <RaffleScreen data={data} />
+      <ProductsScreen />
     </div>
   );
 };
 
-export default Raffle;
+export default Products;
