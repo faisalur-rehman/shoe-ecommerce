@@ -2,6 +2,20 @@ import React, { useEffect } from "react";
 import useApi from "../../hooks/useApi";
 import * as api from "../../api/api";
 import RaffleFormScreen from "./RaffleFormScreen";
+
+const initialValues = {
+  firstName: "",
+  lastName: "",
+  email: "",
+  size: "",
+  address: "",
+  postCode: "",
+  city: "",
+  country: "",
+  gender: "",
+  size: "",
+};
+
 const RaffleForm = () => {
   const { data, request } = useApi(api.getRaffle);
   useEffect(() => {
@@ -15,9 +29,18 @@ const RaffleForm = () => {
     fetchData();
     //eslint-disable-next-line
   }, []);
+
+  function handleSubmit({ formValues }) {
+    console.log(formValues);
+  }
+
   return (
     <div>
-      <RaffleFormScreen data={data} />
+      <RaffleFormScreen
+        data={data}
+        initialValues={initialValues}
+        handleSubmit={handleSubmit}
+      />
     </div>
   );
 };

@@ -27,7 +27,7 @@ export function updateProfile(data) {
 }
 
 export function getArticles() {
-  return api.get(`/article/get-all`, config);
+  return api.get(`/article/get-all-sneakers`, config);
 }
 
 export function forgotPassword(data) {

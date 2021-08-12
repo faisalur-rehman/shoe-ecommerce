@@ -4,12 +4,11 @@ import ProductsScreen from "./AllProductsScreen";
 import * as api from "../../api/api";
 
 const Products = () => {
-  const { request } = useApi(api.getArticles);
+  const { data, request } = useApi(api.getArticles);
   useEffect(() => {
     async function fetchData() {
       try {
-        const { data } = await request();
-        // console.log("profile", data);
+        await request();
       } catch (error) {
         console.log(error.response);
       }
@@ -17,11 +16,7 @@ const Products = () => {
     fetchData();
     //eslint-disable-next-line
   }, []);
-  return (
-    <div>
-      <ProductsScreen />
-    </div>
-  );
+  return <div>{data && <ProductsScreen data={data} />}</div>;
 };
 
 export default Products;

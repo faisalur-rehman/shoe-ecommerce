@@ -1,8 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import sneaker from "../../image/sneaker_one.png";
 
-const SliderComponent = () => {
+const SliderComponent = ({ data }) => {
+  console.log("data", data);
   const settings = {
     dots: true,
     infinite: true,
@@ -44,94 +46,28 @@ const SliderComponent = () => {
       <Slider {...settings}>
         <div>
           <section class="sneakers_list">
-            <div class="single_sneaker">
-              <a href="single_sneaker.html">
-                <img src={sneaker} alt="" />
-              </a>
-              <p>Jordan 1 Retro High Dior</p>
-              <small> 7.800 chf</small>
-            </div>
-            <div class="single_sneaker">
-              <a href="single_sneaker.html">
-                <img src={sneaker} alt="" />
-              </a>
-              <p>Jordan 1 Retro High Dior</p>
-              <small> 7.800 chf</small>
-            </div>
-            <div class="single_sneaker">
-              <a href="single_sneaker.html">
-                <img src={sneaker} alt="" />
-              </a>
-              <p>Jordan 1 Retro High Dior</p>
-              <small> 7.800 chf</small>
-            </div>
-            <div class="single_sneaker">
-              <a href="single_sneaker.html">
-                <img src={sneaker} alt="" />
-              </a>
-              <p>Jordan 1 Retro High Dior</p>
-              <small> 7.800 chf</small>
-            </div>
-            <div class="single_sneaker">
-              <a href="single_sneaker.html">
-                <img src={sneaker} alt="" />
-              </a>
-              <p>Jordan 1 Retro High Dior</p>
-              <small> 7.800 chf</small>
-            </div>
-            <div class="single_sneaker">
-              <a href="single_sneaker.html">
-                <img src={sneaker} alt="" />
-              </a>
-              <p>Jordan 1 Retro High Dior</p>
-              <small> 7.800 chf</small>
-            </div>
+            {data.articles.map((article) => (
+              <div class="single_sneaker">
+                <Link to={`/raffle-product/${article._id}`}>
+                  <img src={`http://localhost:8000/${article.image}`} alt="" />
+                </Link>
+                <p>{article.name}</p>
+                <small> {article.price}chf</small>
+              </div>
+            ))}
           </section>
         </div>
         <div>
           <section class="sneakers_list">
-            <div class="single_sneaker">
-              <a href="single_sneaker.html">
-                <img src={sneaker} alt="" />
-              </a>
-              <p>Jordan 1 Retro High Dior</p>
-              <small> 7.800 chf</small>
-            </div>
-            <div class="single_sneaker">
-              <a href="single_sneaker.html">
-                <img src={sneaker} alt="" />
-              </a>
-              <p>Jordan 1 Retro High Dior</p>
-              <small> 7.800 chf</small>
-            </div>
-            <div class="single_sneaker">
-              <a href="single_sneaker.html">
-                <img src={sneaker} alt="" />
-              </a>
-              <p>Jordan 1 Retro High Dior</p>
-              <small> 7.800 chf</small>
-            </div>
-            <div class="single_sneaker">
-              <a href="single_sneaker.html">
-                <img src={sneaker} alt="" />
-              </a>
-              <p>Jordan 1 Retro High Dior</p>
-              <small> 7.800 chf</small>
-            </div>
-            <div class="single_sneaker">
-              <a href="single_sneaker.html">
-                <img src={sneaker} alt="" />
-              </a>
-              <p>Jordan 1 Retro High Dior</p>
-              <small> 7.800 chf</small>
-            </div>
-            <div class="single_sneaker">
-              <a href="single_sneaker.html">
-                <img src={sneaker} alt="" />
-              </a>
-              <p>Jordan 1 Retro High Dior</p>
-              <small> 7.800 chf</small>
-            </div>
+            {data.articles.map((article) => (
+              <div class="single_sneaker">
+                <a href="single_sneaker.html">
+                  <img src={`http://localhost:8000/${article.image}`} alt="" />
+                </a>
+                <p>{article.name}</p>
+                <small> {article.price}chf</small>
+              </div>
+            ))}
           </section>
         </div>
       </Slider>

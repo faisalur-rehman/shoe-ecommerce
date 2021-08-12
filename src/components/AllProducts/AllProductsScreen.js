@@ -5,7 +5,7 @@ import Sidebar from "../Sidebar/Sidebar";
 import SliderComponent from "../Slider/Slider";
 import "./AllProducts.css";
 
-const ProductsScreen = () => {
+const ProductsScreen = ({ data }) => {
   const [state, setstate] = useState("");
   function handleClick() {
     setstate("responsive_bar");
@@ -26,9 +26,9 @@ const ProductsScreen = () => {
           <section class="sneaker_form_body_section">
             <div class="sneaker_form_container">
               <div class="sneaker_section_heading">
-                <h3>sneakers</h3>
+                <h3>Sneakers</h3>
               </div>
-              <SliderComponent />
+              <SliderComponent data={data} />
             </div>
           </section>
         </section>
