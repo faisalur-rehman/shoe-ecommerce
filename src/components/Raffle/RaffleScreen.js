@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import raffle from "../../image/raffle_one.png";
 import mobileLogo from "../../image/mobile_logo.png";
 import "./Raffle.css";
 import { Link } from "react-router-dom";
 import ResponsiveNavbar from "../ResponsiveNavbar/ResponsiveNavbar";
 
 const RaffleScreen = ({ data }) => {
+  console.log("data", data);
   const [state, setstate] = useState("");
   function handleClick() {
     setstate("responsive_bar");
@@ -97,21 +97,24 @@ const RaffleScreen = ({ data }) => {
         <section class="raffle_body_section">
           <div class="raffle_container">
             <div class="raffle_section_heading">
-              <h3>raffle</h3>
+              <h3>{data.articles[0].name}</h3>
             </div>
             <div class="raffle_section_contact_detail">
               <figure>
-                <img src={raffle} alt="" />
+                <img
+                  src={`https://shoe-e-store-restapi.herokuapp.com/${data.articles[0].image}`}
+                  alt=""
+                />
               </figure>
 
               <div class="reffle_product_name">
-                <h4>air jordan 1 university blue</h4>
+                <h4>{data.articles[0].description}</h4>
               </div>
               <div class="reffle_product_size">
-                <h5>199.90 chf</h5>
+                <h5>{data.articles[0].price}chf</h5>
               </div>
               <div class="buy_reffle_product">
-                <Link to="/raffle-form">enter</Link>
+                <Link to="/raffle-form">Enter</Link>
               </div>
             </div>
           </div>

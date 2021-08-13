@@ -5,7 +5,13 @@ import { Field } from "formik";
 import ResponsiveNavbar from "../ResponsiveNavbar/ResponsiveNavbar";
 import AppForm from "../AppForm/AppForm";
 
-const RaffleFormScreen = ({ data, initialValues, handleSubmit, error }) => {
+const RaffleFormScreen = ({
+  data,
+  initialValues,
+  handleSubmit,
+  error,
+  response,
+}) => {
   const [state, setstate] = useState("");
   function handleClick() {
     setstate("responsive_bar");
@@ -21,6 +27,7 @@ const RaffleFormScreen = ({ data, initialValues, handleSubmit, error }) => {
         handleClick={handleClick}
         error={error}
         data={data}
+        response={response}
       />
     </AppForm>
   );
@@ -28,8 +35,15 @@ const RaffleFormScreen = ({ data, initialValues, handleSubmit, error }) => {
 
 export default RaffleFormScreen;
 
-function FormFields({ state, handleClose, handleClick, data, error }) {
-  console.log("error", error);
+function FormFields({
+  state,
+  handleClose,
+  handleClick,
+  data,
+  error,
+  response,
+}) {
+  console.log("error", response);
   return (
     <div>
       <section id="greater_then_mobile">
@@ -71,7 +85,7 @@ function FormFields({ state, handleClose, handleClick, data, error }) {
                 <div class="raffle_form_img_detail">
                   <figure>
                     <img
-                      src={`http://localhost:8000/${data.articles[0].image}`}
+                      src={`https://shoe-e-store-restapi.herokuapp.com/${data.articles[0].image}`}
                       alt=""
                     />
                   </figure>
@@ -146,7 +160,7 @@ function FormFields({ state, handleClose, handleClick, data, error }) {
                         <Field name="city" type="text" placeholder="" />
                       </div>
                       <div class="raffle_purchase_form_input_field">
-                        <label>country</label>
+                        <label>State</label>
                         <Field name="country" type="text" placeholder="" />
                       </div>
 
@@ -165,6 +179,8 @@ function FormFields({ state, handleClose, handleClick, data, error }) {
                           ))}
                         </Field>
                       </div>
+                      <br />
+
                       <div class="raffle_purchase_form_input_field">
                         <label>instagram account name</label>
                         <Field name="instagram" type="text" placeholder="" />
@@ -209,6 +225,7 @@ function FormFields({ state, handleClose, handleClick, data, error }) {
                       <p style={{ color: "red" }}>
                         {error.data && error.data.message}
                       </p>
+                      <p style={{ color: "green" }}>{response}</p>
                       <div class="raffle_purchase_form_submit_btn">
                         <button>Subscribe</button>
                       </div>
@@ -247,7 +264,7 @@ function FormFields({ state, handleClose, handleClick, data, error }) {
               <div class="raffle_form_img_detail">
                 <figure>
                   <img
-                    src={`http://localhost:8000/${data.articles[0].image}`}
+                    src={`https://shoe-e-store-restapi.herokuapp.com/${data.articles[0].image}`}
                     alt=""
                   />
                 </figure>
@@ -320,22 +337,10 @@ function FormFields({ state, handleClose, handleClick, data, error }) {
                       <Field name="city" type="text" placeholder="" />
                     </div>
                     <div class="raffle_purchase_form_input_field">
-                      <label>country</label>
+                      <label>State</label>
                       <Field name="country" type="text" placeholder="" />
                     </div>
-                    <div class="">
-                      <label>Gender</label>
-                      <br />
-                      <label>
-                        <Field type="radio" name="gender" value="male" />
-                        Male
-                      </label>
-                      <br />
-                      <label>
-                        <Field type="radio" name="gender" value="female" />
-                        Female
-                      </label>
-                    </div>
+
                     <div class="">
                       <label>size</label>
                       <br />
@@ -351,9 +356,23 @@ function FormFields({ state, handleClose, handleClick, data, error }) {
                         ))}
                       </Field>
                     </div>
+                    <br />
                     <div class="raffle_purchase_form_input_field">
                       <label>instagram account name</label>
                       <Field name="instagram" type="text" placeholder="" />
+                    </div>
+                    <div class="">
+                      <label>Gender</label>
+                      <br />
+                      <label>
+                        <Field type="radio" name="gender" value="male" />
+                        Male
+                      </label>
+                      <br />
+                      <label>
+                        <Field type="radio" name="gender" value="female" />
+                        Female
+                      </label>
                     </div>
                     <div class="raffle_purchase_form_check_box">
                       <a href="#">terms & conditions</a>
@@ -380,7 +399,10 @@ function FormFields({ state, handleClose, handleClick, data, error }) {
                       <Field type="checkbox" />
                       <label>raffle information</label>
                     </div>
-
+                    <p style={{ color: "red" }}>
+                      {error.data && error.data.message}
+                    </p>
+                    <p style={{ color: "green" }}>{response}</p>
                     <div class="raffle_purchase_form_submit_btn">
                       <button>subscribe</button>
                     </div>

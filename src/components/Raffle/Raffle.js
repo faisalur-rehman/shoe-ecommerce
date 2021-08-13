@@ -16,11 +16,7 @@ const Raffle = () => {
     fetchData();
     //eslint-disable-next-line
   }, []);
-  return (
-    <div>
-      <RaffleScreen data={data} />
-    </div>
-  );
+  return <div>{data && <RaffleScreen data={data} />}</div>;
 };
 
 export default Raffle;

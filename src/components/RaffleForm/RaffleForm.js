@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import useApi from "../../hooks/useApi";
 import * as api from "../../api/api";
 import RaffleFormScreen from "./RaffleFormScreen";
@@ -17,6 +17,7 @@ const initialValues = {
 };
 
 const RaffleForm = () => {
+  const [response, setResponse] = useState("");
   const { data, request } = useApi(api.getRaffle);
   const fillRaffle = useApi(api.fillRaffle);
   useEffect(() => {
@@ -34,21 +35,25 @@ const RaffleForm = () => {
   async function handleSubmit({ formValues }) {
     console.log(formValues);
     try {
-      await fillRaffle.request({
+      const response = await fillRaffle.request({
         ...formValues,
         articleId: data.articles[0]._id,
       });
+      setResponse(response.data.message);
     } catch (_) {}
   }
 
   return (
     <div>
-      <RaffleFormScreen
-        data={data}
-        initialValues={initialValues}
-        handleSubmit={handleSubmit}
-        error={fillRaffle.error}
-      />
+      {data && (
+        <RaffleFormScreen
+          data={data}
+          initialValues={initialValues}
+          handleSubmit={handleSubmit}
+          error={fillRaffle.error}
+          response={response}
+        />
+      )}
     </div>
   );
 };
