@@ -25,6 +25,7 @@ import ContactMessage from "./components/Admin/ContactMessage/ContactMessage";
 import OrderHistory from "./components/Admin/OrderHistory/OrderHistory";
 import AdminRaffleProduct from "./components/Admin/AdminRaffleProduct/AdminRaffleProduct";
 import UpdateProduct from "./components/Admin/UpdateProduct/UpdateProduct";
+import UserRaffle from "./components/UserRaffle/UserRaffle";
 
 function App() {
   return (
@@ -89,6 +90,9 @@ function App() {
           <Route path="/admin">
             <Header />
           </Route>
+          <Route path="/user-raffle">
+            <UserRaffle />
+          </Route>
           {
             //admin routes
           }
@@ -107,7 +111,7 @@ function App() {
           <Route exact path="/admin-raffle">
             <AdminRaffleProduct />
           </Route>
-          <Route exact path="/update-product">
+          <Route exact path="/update-product/:id">
             <UpdateProduct />
           </Route>
         </Switch>

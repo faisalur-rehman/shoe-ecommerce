@@ -21,9 +21,9 @@ function OrderHistoryScreen({ data }) {
                   </tr>
                   {data.orderhistory.map((history) => (
                     <tr>
-                      <td>{history.userId.name}</td>
-                      <td>{history.userId.email}</td>
-                      <td>{history.articleId.name}</td>
+                      <td>{history.userId && history.userId.name}</td>
+                      <td>{history.userId && history.userId.email}</td>
+                      <td>{history.articleId && history.articleId.name}</td>
                       <td>{history.shippingAddress}</td>
                       <td>{history.totalPrice}</td>
                       <td>{history.isPaid ? "Paid" : "Not Paid"}</td>

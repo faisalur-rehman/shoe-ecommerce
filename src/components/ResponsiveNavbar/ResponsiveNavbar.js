@@ -32,27 +32,30 @@ const ResponsiveNavbar = ({ state, handleClose }) => {
 
         <section class="responsive_nav_details">
           <div class="responsive_nav_details_secion_one">
-            <span>
+            <p>
               <Link to="/">start</Link>
-            </span>
-            <span>
+            </p>
+            <p>
               <Link to="/raffle">RAFFLE</Link>
-            </span>
-            <span>
+            </p>
+            <p>
+              <Link to="/user-raffle">YOUR RAFFLE</Link>
+            </p>
+            <p>
               {" "}
               <Link to="/allProducts">SNEAKERS</Link>
-            </span>
-            <span>
+            </p>
+            <p>
               {" "}
               <Link to="/signup">Sign up</Link>
-            </span>
-            <span>
+            </p>
+            <p>
               {" "}
               <Link to="/account">Account</Link>
-            </span>
-            <span>
+            </p>
+            <p>
               <Link to="/signin">login</Link>
-            </span>
+            </p>
           </div>
           <div class="responsive_nav_details_secion_two">
             <ul>

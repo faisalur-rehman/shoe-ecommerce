@@ -20,20 +20,23 @@ function Header() {
               <span>Dashboard</span>
             </div>
             <div class="dashboard_buttons" id="change_active">
-              <Link class="btn">
-                <span onclick="Order_history()">Order History</span>
+              <Link to="/orderHistory" class="btn">
+                <span>Order History</span>
               </Link>
               <Link to="/all-products" class="btn">
-                <span onclick="All_Product()">All Product</span>
+                <span>All Product</span>
               </Link>
-              <Link class="btn">
-                <span onclick="raffle_products()">Raffle Products</span>
+              <Link to="/admin-raffle" class="btn">
+                <span>Raffle Products</span>
               </Link>
               <Link to="/add-product" class="btn">
-                <span onclick="add_product()">Add Product</span>
+                <span>Add Product</span>
               </Link>
-              <Link class="btn">
-                <span onclick="Contact_Messages()">Contact Messages</span>
+              <Link to="/contact-message" class="btn">
+                <span>Contact Messages</span>
+              </Link>
+              <Link to="/signin" class="btn">
+                <span>Logout</span>
               </Link>
             </div>
           </section>

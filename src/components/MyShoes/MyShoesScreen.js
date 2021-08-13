@@ -64,7 +64,10 @@ const MyShoesScreen = ({ data }) => {
                         <div class="myshoes_page_labels_fields" key={order._id}>
                           <div class="myshoes_name_field">
                             <figure>
-                              <img src={singleShoe} alt="" />
+                              <img
+                                src={`https://shoe-e-store-restapi.herokuapp.com/${order.image}`}
+                                alt=""
+                              />
                             </figure>
                             <div class="myshoes_name_field_detail">
                               <small>jordan 1 retro high</small>

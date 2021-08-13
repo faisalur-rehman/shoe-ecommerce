@@ -149,18 +149,7 @@ function FormFields({ state, handleClose, handleClick, data, error }) {
                         <label>country</label>
                         <Field name="country" type="text" placeholder="" />
                       </div>
-                      <div role="group" aria-labelledby="my-radio-group">
-                        <div>Gender</div>
-                        <label>
-                          <Field type="radio" name="gender" value="male" />
-                          Male
-                        </label>
-                        <br />
-                        <label>
-                          <Field type="radio" name="gender" value="female" />
-                          Female
-                        </label>
-                      </div>
+
                       <div class="">
                         <label>size</label>
                         <br />
@@ -179,6 +168,18 @@ function FormFields({ state, handleClose, handleClick, data, error }) {
                       <div class="raffle_purchase_form_input_field">
                         <label>instagram account name</label>
                         <Field name="instagram" type="text" placeholder="" />
+                      </div>
+                      <div>
+                        <div>Gender</div>
+                        <label>
+                          <Field type="radio" name="gender" value="male" />
+                          Male
+                        </label>
+                        <br />
+                        <label>
+                          <Field type="radio" name="gender" value="female" />
+                          Female
+                        </label>
                       </div>
                       <div class="raffle_purchase_form_check_box">
                         <a href="#">terms & conditions</a>

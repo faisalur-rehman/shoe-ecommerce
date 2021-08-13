@@ -48,7 +48,10 @@ const SliderComponent = ({ data }) => {
             {data.articles.map((article) => (
               <div class="single_sneaker">
                 <Link to={`/raffle-product/${article._id}`}>
-                  <img src={`http://localhost:8000/${article.image}`} alt="" />
+                  <img
+                    src={`https://shoe-e-store-restapi.herokuapp.com/${article.image}`}
+                    alt=""
+                  />
                 </Link>
                 <p>{article.name}</p>
                 <small> {article.price}chf</small>
@@ -61,7 +64,10 @@ const SliderComponent = ({ data }) => {
             {data.articles.map((article) => (
               <div class="single_sneaker">
                 <a href="single_sneaker.html">
-                  <img src={`http://localhost:8000/${article.image}`} alt="" />
+                  <img
+                    src={`https://shoe-e-store-restapi.herokuapp.com/${article.image}`}
+                    alt=""
+                  />
                 </a>
                 <p>{article.name}</p>
                 <small> {article.price}chf</small>

@@ -1,6 +1,12 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 
-function AllProductScreen() {
+function AllProductScreen({ data, handleDelete }) {
+  const history = useHistory();
+  console.log("data", data);
+  function handleEdit(id) {
+    history.push(`/update-product/${id}`);
+  }
   return (
     <>
       <section
@@ -15,7 +21,6 @@ function AllProductScreen() {
               <table>
                 <tbody>
                   <tr>
-                    <th>Image</th>
                     <th>Name</th>
                     <th>Style</th>
                     <th>Type</th>
@@ -26,38 +31,33 @@ function AllProductScreen() {
                     <th>Edit</th>
                     <th>Delete</th>
                   </tr>
-                  <tr>
-                    <td>
-                      <img
-                        class="admin_page_product_img"
-                        src="image/sneaker_one.png"
-                        alt="image"
-                      />
-                    </td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>
-                      <select class="admin_size_selection">
-                        <option>4 </option>
-                      </select>
-                    </td>
-                    <td></td>
-                    <td>
-                      <textarea class="admin_textarea"></textarea>
-                    </td>
-                    <td></td>
-                    <td>
-                      <a>
-                        <i class="fas fa-edit"></i>
-                      </a>
-                    </td>
-                    <td>
-                      <a>
-                        <i class="fas fa-trash-alt"></i>
-                      </a>
-                    </td>
-                  </tr>
+                  {data.articles.map((article) => (
+                    <tr>
+                      <td>{article.name}</td>
+                      <td>{article.style}</td>
+                      <td>{article.type}</td>
+                      <td>{article.availableSizes}</td>
+                      <td>{new Date(article.releaseDate).toDateString()}</td>
+                      <td>{article.description}</td>
+                      <td>{article.price}</td>
+                      <td>
+                        <a>
+                          <i
+                            class="fas fa-edit"
+                            onClick={() => handleEdit(article._id)}
+                          ></i>
+                        </a>
+                      </td>
+                      <td>
+                        <a>
+                          <i
+                            class="fas fa-trash-alt"
+                            onClick={() => handleDelete(article._id)}
+                          ></i>
+                        </a>
+                      </td>
+                    </tr>
+                  ))}
                 </tbody>
               </table>
             </div>

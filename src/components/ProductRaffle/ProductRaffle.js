@@ -52,7 +52,7 @@ function FormFields({ state, handleClose, handleClick, data, error }) {
               <div class="select_single_sneaker">
                 <img
                   class="gear"
-                  src={`http://localhost:8000/${data.article.image}`}
+                  src={`https://shoe-e-store-restapi.herokuapp.com/${data.article.image}`}
                   alt=""
                 />
               </div>
@@ -72,19 +72,26 @@ function FormFields({ state, handleClose, handleClick, data, error }) {
               <div class="select_single_sneaker_size">
                 <h4>{data.article.price} CHF</h4>
               </div>
-              <label>Size</label>
-              <div class="">
-                <Field as="select" name="sizeSelected" className="form-control">
-                  <option value="" selected disabled>
-                    Select
-                  </option>
 
-                  {data.article.availableSizes.map((size) => (
-                    <>
-                      <option value={size}>{size}</option>
-                    </>
-                  ))}
-                </Field>
+              <div class="single_raffle_complete_detail">
+                <div class="raffle_size">
+                  <label>Size</label>
+                  <Field
+                    as="select"
+                    name="sizeSelected"
+                    className="form-control"
+                  >
+                    <option value="" selected disabled>
+                      Select
+                    </option>
+
+                    {data.article.availableSizes.map((size) => (
+                      <>
+                        <option value={size}>{size}</option>
+                      </>
+                    ))}
+                  </Field>
+                </div>
                 <div class="raffle_purchase_form_input_field">
                   <label>Shipping Address</label>
                   <Field name="shippingAddress" type="text" placeholder="" />
@@ -123,36 +130,60 @@ function FormFields({ state, handleClose, handleClick, data, error }) {
         <section class="single_sneaker_body_section">
           <div class="single_sneaker_container">
             <div class="single_sneaker_section_heading">
-              <h3>jordan 1 retro high dior</h3>
+              <h3>{data.article.name}</h3>
             </div>
 
             <div class="select_single_sneaker">
-              <img class="gear" src={sneaker} alt="" />
+              <img
+                class="gear"
+                src={`https://shoe-e-store-restapi.herokuapp.com/${data.article.image}`}
+                alt=""
+              />
             </div>
+
             <div class="custom_scroll">
               <div class="scroll_section"></div>
             </div>
+
             <div class="select_single_sneaker_properties">
-              <p>STYLE AQ0818-148</p>
-              <p>COLORWAY WHITE/DARK POWDER BLUE-CONE</p>
-              <p>RELEASE-DATUM 23.06.2018</p>
+              <p>STYLE {data.article.style}</p>
+              <p>{data.article.description}</p>
+              <p>
+                RELEASE-DATE{"  "}
+                {new Date(data.article.releaseDate).toDateString()}
+              </p>
             </div>
-            <form>
-              <div class="select_single_sneaker_size">
-                <h4>CHF 5’000 CHF</h4>
-              </div>
-              <div class="single_sneaker_size_selecter">
-                <select>
+            <div class="select_single_sneaker_size">
+              <h4>{data.article.price} CHF</h4>
+            </div>
+            <div class="single_raffle_complete_detail">
+              <div class="raffle_size">
+                <label>Size</label>
+                <Field as="select" name="sizeSelected" className="form-control">
                   <option value="" selected disabled>
-                    SIZE
+                    Select
                   </option>
-                  <option value="CHF 5’000 CHF">CHF 5’000 CHF</option>
-                </select>
+
+                  {data.article.availableSizes.map((size) => (
+                    <>
+                      <option value={size}>{size}</option>
+                    </>
+                  ))}
+                </Field>
               </div>
-              <div class="single_sneaker_buy_button">
-                <a href="payment.html">add to bag</a>
+              <div class="raffle_purchase_form_input_field">
+                <label>Shipping Address</label>
+                <Field name="shippingAddress" type="text" placeholder="" />
               </div>
-            </form>
+              <div class="raffle_purchase_form_input_field">
+                <label>Shipping State</label>
+                <Field name="shippingState" type="text" placeholder="" />
+              </div>
+            </div>
+            <p style={{ color: "red" }}>{error.data && error.data.message}</p>
+            <div class="single_sneaker_buy_button">
+              <button type="submit">Add to bag</button>
+            </div>
           </div>
         </section>
       </section>

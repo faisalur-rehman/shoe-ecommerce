@@ -1,6 +1,7 @@
 import axios from "axios";
 import React from "react";
 import { useState } from "react";
+import Layout from "../../Layout/Layout";
 import AddproductScreen from "./AddProductScreen";
 
 const initialValues = {
@@ -49,14 +50,14 @@ const AddProduct = () => {
     setFile(target.files[0]);
   }
   return (
-    <div>
+    <Layout>
       <AddproductScreen
         initialValues={initialValues}
         handleSubmit={handleSubmit}
         handleImage={handleImage}
         response={response}
       />
-    </div>
+    </Layout>
   );
 };
 

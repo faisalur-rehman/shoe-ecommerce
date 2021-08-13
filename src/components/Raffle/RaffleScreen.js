@@ -54,7 +54,7 @@ const RaffleScreen = ({ data }) => {
                 <div class="raffle_section_contact_detail">
                   <figure>
                     <img
-                      src={`http://localhost:8000/${data.articles[0].image}`}
+                      src={`https://shoe-e-store-restapi.herokuapp.com/${data.articles[0].image}`}
                       alt=""
                     />
                   </figure>

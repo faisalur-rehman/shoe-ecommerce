@@ -4,6 +4,7 @@ import mobileLogo from "../../image/mobile_logo.png";
 import "./Payment.css";
 import Sidebar from "../Sidebar/Sidebar";
 import { Link } from "react-router-dom";
+import ResponsiveNavbar from "../ResponsiveNavbar/ResponsiveNavbar";
 
 const PaymentScreen = ({ data, id }) => {
   console.log("data", data);
@@ -29,7 +30,7 @@ const PaymentScreen = ({ data, id }) => {
             <div class="product_purchased_section">
               <figure>
                 <img
-                  src={`http://localhost:8000/${data.orderhistory.articleId.image}`}
+                  src={`https://shoe-e-store-restapi.herokuapp.com/${data.orderhistory.articleId.image}`}
                   alt=""
                 />
               </figure>
@@ -133,19 +134,26 @@ const PaymentScreen = ({ data, id }) => {
         <section class="payment_page_section_body">
           <div class="product_purchased_section">
             <figure>
-              <img src={raffle} alt="" />
+              <img
+                src={`https://shoe-e-store-restapi.herokuapp.com/${data.orderhistory.articleId.image}`}
+                alt=""
+              />
             </figure>
             <div class="product_purchased">
               <span> STYLE</span>
-              <p>AQ0818-148</p>
+              <p>{data.orderhistory.articleId.style}</p>
             </div>
             <div class="product_purchased">
               <span>COLORWAY</span>
-              <p>WHITE/DARK POWDER BLUE-CONE</p>
+              <p>{data.orderhistory.articleId.description}</p>
             </div>
             <div class="product_purchased">
               <span>RELEASE-DATUM</span>
-              <p>23.06.2018</p>
+              <p>
+                {new Date(
+                  data.orderhistory.articleId.releaseDate
+                ).toDateString()}
+              </p>
             </div>
           </div>
 
@@ -155,16 +163,16 @@ const PaymentScreen = ({ data, id }) => {
                 <h3>RECEIPT</h3>
                 <div class="receipt_detail_section">
                   <div class="receipt_detail">
-                    <p>U.S. Men‘s Size:</p>
-                    <span>10</span>
+                    <p>U.S. Size:</p>
+                    <span>{data.orderhistory.sizeSelected}</span>
                   </div>
                   <div class="receipt_detail">
                     <p>Colorway:</p>
-                    <span>Pink Foam/White/University Red-Pine Green</span>
+                    <span>{data.orderhistory.articleId.description}</span>
                   </div>
                   <div class="receipt_detail">
                     <p>Style:</p>
-                    <span> CU6312-600</span>
+                    <span>{data.orderhistory.articleId.style}</span>
                   </div>
                   <div class="receipt_detail">
                     <p>Condition:</p>
@@ -173,11 +181,11 @@ const PaymentScreen = ({ data, id }) => {
 
                   <div class="receipt_detail">
                     <p>Purchase Price</p>
-                    <span>5’000.00 CHF</span>
+                    <span>{data.orderhistory.articleId.price} CHF</span>
                   </div>
                   <div class="receipt_detail">
                     <p>Import Duties (incl.above)</p>
-                    <span>0.00 CHF</span>
+                    <span>{data.orderhistory.importDuties} CHF</span>
                   </div>
                   <div class="receipt_detail">
                     <p>Tax (incl. above)</p>
@@ -185,42 +193,31 @@ const PaymentScreen = ({ data, id }) => {
                   </div>
                   <div class="receipt_detail">
                     <p>Processing Fee</p>
-                    <span>5.00 CHF</span>
+                    <span>{data.orderhistory.processingFee} CHF</span>
                   </div>
                   <div class="receipt_detail">
                     <p>Shipping</p>
-                    <span>0.00 CHF</span>
+                    <span>{data.orderhistory.shippingPrice} CHF</span>
+                  </div>
+                  <div class="receipt_detail">
+                    <p>Shipping Address</p>
+                    <span>{data.orderhistory.shippingAddress}</span>
                   </div>
                 </div>
                 <div class="receipt_detail_total">
                   <p>Total</p>
-                  <span>5’005.00 CHF</span>
+                  <span>{data.orderhistory.totalPrice} CHF</span>
                 </div>
 
-                <div class="credit_detail_section">
-                  <div class="credit_detail">
-                    <i class="fab fa-cc-stripe"></i>
-                    <p>MasterCard ends with 8922</p>
-                    <a href="#">
-                      <i class="fas fa-pen"></i>
-                    </a>
-                  </div>
-                  <div class="credit_detail">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <p>Arinstrasse 9</p>
-                    <a href="#">
-                      <i class="fas fa-pen"></i>
-                    </a>
-                  </div>
-                </div>
-                <div class="purchased_btn">
-                  <button>Buy</button>
-                </div>
+                <Link to={`/stripe/${id}`} class="purchased_btn">
+                  <button>buy</button>
+                </Link>
               </div>
             </div>
           </section>
         </section>
       </section>
+      <ResponsiveNavbar state={state} handleClose={handleClose} />
     </div>
   );
 };

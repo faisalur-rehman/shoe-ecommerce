@@ -1,9 +1,10 @@
 import axios from "axios";
 
-const DEV_URL = "http://localhost:8000";
+// const DEV_URL = "http://localhost:8000";
+const PROD_URL = "https://shoe-e-store-restapi.herokuapp.com/";
 
 const api = axios.create({
-  baseURL: DEV_URL,
+  baseURL: PROD_URL,
 });
 
 const config = {
@@ -63,4 +64,29 @@ export function allContactMessages() {
 }
 export function orderHistory() {
   return api.get(`/order-history/get-all`, config);
+}
+export function deleteArticle(id) {
+  return api.delete("/article/delete", {
+    headers: {
+      Authorization: localStorage.getItem("token"),
+    },
+    data: {
+      articleId: id,
+    },
+  });
+}
+export function updateArticles(data) {
+  return api.patch(`/article/update`, { ...data }, config);
+}
+export function getAllRaffleAdmin() {
+  return api.get(`/raffle/get-all-for-admin`, config);
+}
+export function declareWinner(data) {
+  return api.patch(`/raffle/declare-winner`, { ...data }, config);
+}
+export function getAllRaffleUser() {
+  return api.get(`/raffle/get-all-for-user`, config);
+}
+export function createPaymentIntent(data) {
+  return api.post(`/raffle/create-payment-intend`, { ...data }, config);
 }
