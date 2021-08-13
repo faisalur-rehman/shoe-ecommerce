@@ -30,7 +30,7 @@ const AddProduct = () => {
     formData.append("name", formValues.name);
     try {
       const { data } = await axios.post(
-        `http://localhost:8000/article/add`,
+        `https://shoe-e-store-restapi.herokuapp.com/article/add`,
         formData,
         {
           headers: {
