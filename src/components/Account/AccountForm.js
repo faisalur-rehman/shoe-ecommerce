@@ -162,10 +162,13 @@ function FormFields({ state, handleClose, handleClick, error, data }) {
                     <span>buy information</span>
                   </label>
                   <div class="setting_fields">
-                    <p>MasterCard ends with 1445</p>
-                    <a href="#">
+                    <Field
+                      className="profile_input_data_fields"
+                      name="masterCardNumber"
+                    />
+                    <Link href="#">
                       <i class="fas fa-pen"></i>
-                    </a>
+                    </Link>
                   </div>
                 </div>
 
@@ -174,10 +177,14 @@ function FormFields({ state, handleClose, handleClick, error, data }) {
                     <span>bill adress</span>
                   </label>
                   <div class="setting_fields">
-                    <p>Arinstrasse 17, 9805 Triesen</p>
-                    <a href="#">
+                    <Field
+                      className="profile_input_data_fields"
+                      name="billingAddress"
+                      type="password"
+                    />
+                    <Link href="#">
                       <i class="fas fa-pen"></i>
-                    </a>
+                    </Link>
                   </div>
                 </div>
 
@@ -186,10 +193,14 @@ function FormFields({ state, handleClose, handleClick, error, data }) {
                     <span>delivery adress</span>
                   </label>
                   <div class="setting_fields">
-                    <p>Arinstrasse 17, 9805 Triesen</p>
-                    <a href="#">
+                    <Field
+                      className="profile_input_data_fields"
+                      name="deliveryAddress"
+                      type="password"
+                    />
+                    <Link href="#">
                       <i class="fas fa-pen"></i>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>

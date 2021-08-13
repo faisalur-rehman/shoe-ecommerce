@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import homeBanner from "../../image/home_banner.png";
 import homeArrow from "../../image/home_page_arrow.png";
 import mobileLogo from "../../image/mobile_logo.png";
+import ResponsiveNavbar from "../ResponsiveNavbar/ResponsiveNavbar";
 import Sidebar from "../Sidebar/Sidebar";
 
 const Main = () => {
@@ -161,6 +162,7 @@ const Main = () => {
           </a>
         </div>
       </section>
+      <ResponsiveNavbar state={state} handleClose={handleClose} />
     </div>
   );
 };

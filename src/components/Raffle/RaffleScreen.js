@@ -111,7 +111,7 @@ const RaffleScreen = ({ data }) => {
                 <h5>199.90 chf</h5>
               </div>
               <div class="buy_reffle_product">
-                <a href="raffle_form.html">enter</a>
+                <Link to="/raffle-form">enter</Link>
               </div>
             </div>
           </div>

@@ -170,13 +170,13 @@ function FormFields({ state, handleClose, handleClick, data, error }) {
           </div>
           <div class="profile_nav">
             <div class="profile_nav_list">
-              <a href="account_setting.html">setting</a>
+              <Link to="/account">setting</Link>
             </div>
             <div class="profile_nav_list">
-              <a href="myshoes.html">my shoes</a>
+              <Link to="/myshoes">my shoes</Link>
             </div>
             <div class="profile_nav_list">
-              <a href="profile.html">profile</a>
+              <Link to="/profile">profile</Link>
             </div>
           </div>
         </div>
@@ -192,45 +192,35 @@ function FormFields({ state, handleClose, handleClick, data, error }) {
                     <span>name</span>
                   </label>
                   <div class="profile_fields">
-                    <p>Marius Müller</p>
-                    <a href="#">
+                    <Field className="profile_input_data_fields" name="name" />
+                    <Link href="#">
                       <i class="fas fa-pen"></i>
-                    </a>
-                  </div>
-                </div>
-
-                <div class="profile_page_input_field">
-                  <label>
-                    <span>adress</span>
-                  </label>
-                  <div class="profile_fields">
-                    <p>Arinstrasse 17, 9805 Triesen</p>
-                    <a href="#">
-                      <i class="fas fa-pen"></i>
-                    </a>
-                  </div>
-                </div>
-
-                <div class="profile_page_input_field">
-                  <label>
-                    <span>email-adress</span>
-                  </label>
-                  <div class="profile_fields">
-                    <p>ryhl@info.li</p>
-                    <a href="#">
-                      <i class="fas fa-pen"></i>
-                    </a>
+                    </Link>
                   </div>
                 </div>
                 <div class="profile_page_input_field">
                   <label>
-                    <span>benutzername</span>
+                    <span>email-address</span>
                   </label>
                   <div class="profile_fields">
-                    <p>snerkarers123048390028</p>
-                    <a href="#">
+                    <Field className="profile_input_data_fields" name="email" />
+                    <Link href="#">
                       <i class="fas fa-pen"></i>
-                    </a>
+                    </Link>
+                  </div>
+                </div>
+                <div class="profile_page_input_field">
+                  <label>
+                    <span>address</span>
+                  </label>
+                  <div class="profile_fields">
+                    <Field
+                      className="profile_input_data_fields"
+                      name="address"
+                    />
+                    <Link href="#">
+                      <i class="fas fa-pen"></i>
+                    </Link>
                   </div>
                 </div>
 
@@ -239,12 +229,22 @@ function FormFields({ state, handleClose, handleClick, data, error }) {
                     <span>password</span>
                   </label>
                   <div class="profile_fields">
-                    <p>reset password</p>
-                    <a href="#">
+                    <Field
+                      className="profile_input_data_fields"
+                      name="password"
+                      type="password"
+                    />
+                    <Link href="#">
                       <i class="fas fa-pen"></i>
-                    </a>
+                    </Link>
                   </div>
                 </div>
+
+                {error.data ? (
+                  <p style={{ color: "red" }}> {error.data.message}</p>
+                ) : (
+                  <p style={{ color: "green" }}>{data && data.message}</p>
+                )}
               </div>
             </div>
           </div>

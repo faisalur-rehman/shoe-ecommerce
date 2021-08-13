@@ -205,7 +205,9 @@ function FormFields({ state, handleClose, handleClick, data, error }) {
                         <Field type="checkbox" />
                         <label>raffle information</label>
                       </div>
-
+                      <p style={{ color: "red" }}>
+                        {error.data && error.data.message}
+                      </p>
                       <div class="raffle_purchase_form_submit_btn">
                         <button>Subscribe</button>
                       </div>

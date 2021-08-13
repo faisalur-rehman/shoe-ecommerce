@@ -2,6 +2,7 @@ import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import React, { useState } from "react";
 import useApi from "../../hooks/useApi";
 import * as api from "../../api/api";
+import { useHistory } from "react-router-dom";
 
 const CARD_OPTIONS = {
   iconStyle: "solid",
@@ -24,6 +25,7 @@ const CARD_OPTIONS = {
 };
 
 export default function PaymentForm({ id }) {
+  const history = useHistory();
   const confirmPayment = useApi(api.confirmPayment);
   const [message, setMessage] = useState("");
   const stripe = useStripe();
@@ -54,6 +56,9 @@ export default function PaymentForm({ id }) {
           await confirmPayment.request({ orderHistoryId: id });
         } catch (_) {}
         setMessage("Money is in the bank!");
+        setTimeout(() => {
+          history.push("/");
+        }, 2000);
         // Show a success message to your customer
         // There's a risk of the customer closing the window before callback
         // execution. Set up a webhook or plugin to listen for the

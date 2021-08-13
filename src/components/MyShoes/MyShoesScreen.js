@@ -82,23 +82,6 @@ const MyShoesScreen = ({ data }) => {
                       <p>No Order History Found</p>
                     )}
                   </div>
-                  {/* <div class="myshoes_page_labels_fields">
-                    <div class="myshoes_name_field">
-                      <figure>
-                        <img src={singleShoe} alt="" />
-                      </figure>
-                      <div class="myshoes_name_field_detail">
-                        <small>jordan 1 retro high</small>
-                        <p>Dior x Nike</p>
-                      </div>
-                    </div>
-                    <div class="myshoes_detail_field">
-                      <p>27.05.2021</p>
-                    </div>
-                    <div class="myshoes_detail_field">
-                      <p>5’005.00 CHF</p>
-                    </div>
-                  </div> */}
                 </div>
               </div>
             </section>
@@ -129,13 +112,13 @@ const MyShoesScreen = ({ data }) => {
           </div>
           <div class="myshoes_nav">
             <div class="myshoes_nav_list">
-              <a href="account_setting.html">setting</a>
+              <Link to="/account">setting</Link>
             </div>
             <div class="myshoes_nav_list">
-              <a href="myshoes.html">my shoes</a>
+              <Link to="/myshoes">my shoes</Link>
             </div>
             <div class="myshoes_nav_list">
-              <a href="profile.html">profile</a>
+              <Link to="/profile">profile</Link>
             </div>
           </div>
         </div>
@@ -157,40 +140,29 @@ const MyShoesScreen = ({ data }) => {
                     <span>price</span>
                   </label>
                 </div>
-                <div class="myshoes_page_labels_fields">
-                  <div class="myshoes_name_field">
-                    <figure>
-                      <img src={singleShoe} alt="" />
-                    </figure>
-                    <div class="myshoes_name_field_detail">
-                      <small>jordan 1 retro high</small>
-                      <p>Dior x Nike</p>
+                {data.orderhistory.length > 0 ? (
+                  data.orderhistory.map((order) => (
+                    <div class="myshoes_page_labels_fields" key={order._id}>
+                      <div class="myshoes_name_field">
+                        <figure>
+                          <img src={singleShoe} alt="" />
+                        </figure>
+                        <div class="myshoes_name_field_detail">
+                          <small>jordan 1 retro high</small>
+                          <p>Dior x Nike</p>
+                        </div>
+                      </div>
+                      <div class="myshoes_detail_field">
+                        <p>27.05.2021</p>
+                      </div>
+                      <div class="myshoes_detail_field">
+                        <p>{order.totalPrice} CHF</p>
+                      </div>
                     </div>
-                  </div>
-                  <div class="myshoes_detail_field">
-                    <p>27.05.2021</p>
-                  </div>
-                  <div class="myshoes_detail_field">
-                    <p>5’005.00 CHF</p>
-                  </div>
-                </div>
-              </div>
-              <div class="myshoes_page_labels_fields">
-                <div class="myshoes_name_field">
-                  <figure>
-                    <img src={singleShoe} alt="" />
-                  </figure>
-                  <div class="myshoes_name_field_detail">
-                    <small>jordan 1 retro high</small>
-                    <p>Dior x Nike</p>
-                  </div>
-                </div>
-                <div class="myshoes_detail_field">
-                  <p>27.05.2021</p>
-                </div>
-                <div class="myshoes_detail_field">
-                  <p>5’005.00 CHF</p>
-                </div>
+                  ))
+                ) : (
+                  <p>No Order History Found</p>
+                )}
               </div>
             </div>
           </div>

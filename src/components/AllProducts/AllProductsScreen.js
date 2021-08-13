@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import mobileLogo from "../../image/mobile_logo.png";
 import sneaker from "../../image/sneaker_one.png";
+import ResponsiveNavbar from "../ResponsiveNavbar/ResponsiveNavbar";
 import Sidebar from "../Sidebar/Sidebar";
 import SliderComponent from "../Slider/Slider";
 import "./AllProducts.css";
@@ -56,122 +57,11 @@ const ProductsScreen = ({ data }) => {
             <div class="sneaker_section_heading">
               <h3>sneakers</h3>
             </div>
-            <div
-              id="carouselExampleControls"
-              class="carousel slide"
-              data-ride="carousel"
-            >
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <section class="sneakers_list">
-                    <div class="single_sneaker">
-                      <a href="single_sneaker.html">
-                        <img src={sneaker} alt="" />
-                      </a>
-                      <p>Jordan 1 Retro High Dior</p>
-                      <small> 7.800 chf</small>
-                    </div>
-                    <div class="single_sneaker">
-                      <a href="single_sneaker.html">
-                        <img src={sneaker} alt="" />
-                      </a>
-                      <p>Jordan 1 Retro High Dior</p>
-                      <small> 7.800 chf</small>
-                    </div>
-                    <div class="single_sneaker">
-                      <a href="single_sneaker.html">
-                        <img src={sneaker} alt="" />
-                      </a>
-                      <p>Jordan 1 Retro High Dior</p>
-                      <small> 7.800 chf</small>
-                    </div>
-                    <div class="single_sneaker">
-                      <a href="single_sneaker.html">
-                        <img src={sneaker} alt="" />
-                      </a>
-                      <p>Jordan 1 Retro High Dior</p>
-                      <small> 7.800 chf</small>
-                    </div>
-                    <div class="single_sneaker">
-                      <a href="single_sneaker.html">
-                        <img src={sneaker} alt="" />
-                      </a>
-                      <p>Jordan 1 Retro High Dior</p>
-                      <small> 7.800 chf</small>
-                    </div>
-                    <div class="single_sneaker">
-                      <a href="single_sneaker.html">
-                        <img src={sneaker} alt="" />
-                      </a>
-                      <p>Jordan 1 Retro High Dior</p>
-                      <small> 7.800 chf</small>
-                    </div>
-                  </section>
-                </div>
-                <div class="carousel-item">
-                  <section class="sneakers_list">
-                    <div class="single_sneaker">
-                      <a href="single_sneaker.html">
-                        <img src={sneaker} alt="" />
-                      </a>
-                      <p>Jordan 1 Retro High Dior</p>
-                      <small> 7.800 chf</small>
-                    </div>
-                    <div class="single_sneaker">
-                      <a href="single_sneaker.html">
-                        <img src={sneaker} alt="" />
-                      </a>
-                      <p>Jordan 1 Retro High Dior</p>
-                      <small> 7.800 chf</small>
-                    </div>
-                    <div class="single_sneaker">
-                      <a href="single_sneaker.html">
-                        <img src={sneaker} alt="" />
-                      </a>
-                      <p>Jordan 1 Retro High Dior</p>
-                      <small> 7.800 chf</small>
-                    </div>
-                    <div class="single_sneaker">
-                      <a href="single_sneaker.html">
-                        <img src={sneaker} alt="" />
-                      </a>
-                      <p>Jordan 1 Retro High Dior</p>
-                      <small> 7.800 chf</small>
-                    </div>
-                    <div class="single_sneaker">
-                      <a href="single_sneaker.html">
-                        <img src={sneaker} alt="" />
-                      </a>
-                      <p>Jordan 1 Retro High Dior</p>
-                      <small> 7.800 chf</small>
-                    </div>
-                    <div class="single_sneaker">
-                      <a href="single_sneaker.html">
-                        <img src={sneaker} alt="" />
-                      </a>
-                      <p>Jordan 1 Retro High Dior</p>
-                      <small> 7.800 chf</small>
-                    </div>
-                  </section>
-                </div>
-              </div>
-              <div class="next_btn">
-                <a
-                  class="carousel-control-next"
-                  href="#/#carouselExampleControls"
-                  role="button"
-                  data-slide="next"
-                >
-                  <span class="carousel-control-next-icon" aria-hidden="true">
-                    <i class="fas fa-arrow-right"></i>
-                  </span>
-                  <span class="sr-only">Next</span>
-                </a>
-              </div>
-            </div>
+            <SliderComponent data={data} />
           </div>
         </section>
       </section>
+      <ResponsiveNavbar state={state} handleClose={handleClose} />
     </div>
   );
 };
