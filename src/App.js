@@ -4,7 +4,6 @@ import Main from "./components/Main/Main";
 import MyShoes from "./components/MyShoes/MyShoes";
 import Impressum from "./components/Impressum/Impressum";
 import Shipping from "./components/Shipping/Shipping";
-import Contact from "./components/Contact/Contact";
 import Privacy from "./components/Privacy/Privacy";
 import Conditions from "./components/Conditions/Conditions";
 import SliderComponent from "./components/Slider/Slider";
@@ -18,6 +17,7 @@ import RaffleForm from "./components/RaffleForm/RaffleForm";
 import SingleProduct from "./components/ProductRaffle/SingleProduct";
 import Payment from "./components/Payment/Payment";
 import StripeContainer from "./components/Stripe/StripeContainer";
+import Contact from "./components/Contact/Contact";
 
 function App() {
   return (
