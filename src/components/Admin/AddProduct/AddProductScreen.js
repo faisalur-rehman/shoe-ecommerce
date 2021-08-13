@@ -29,9 +29,6 @@ function FormFields({ handleImage, response }) {
             <h2>Add New Product</h2>
             <div class="profile_form">
               <div class="profile_section_one">
-                <figure>
-                  <img src="" alt="product_Img" />
-                </figure>
                 <div class="upload_pic">
                   <input
                     type="file"

@@ -58,3 +58,9 @@ export function addContactMessage(data) {
 export function allOrderHistories() {
   return api.get(`/order-history/get-all-for-auth-user`, config);
 }
+export function allContactMessages() {
+  return api.get(`/contact/get-all`, config);
+}
+export function orderHistory() {
+  return api.get(`/order-history/get-all`, config);
+}

@@ -1,6 +1,7 @@
 import React from "react";
 
-function OrderHistoryScreen() {
+function OrderHistoryScreen({ data }) {
+  console.log("data", data);
   return (
     <>
       <section class="purchase_product_history" id="purchase_product_history">
@@ -18,14 +19,16 @@ function OrderHistoryScreen() {
                     <th>Total Price</th>
                     <th>Payment Status</th>
                   </tr>
-                  <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
+                  {data.orderhistory.map((history) => (
+                    <tr>
+                      <td>{history.userId.name}</td>
+                      <td>{history.userId.email}</td>
+                      <td>{history.articleId.name}</td>
+                      <td>{history.shippingAddress}</td>
+                      <td>{history.totalPrice}</td>
+                      <td>{history.isPaid ? "Paid" : "Not Paid"}</td>
+                    </tr>
+                  ))}
                 </tbody>
               </table>
             </div>

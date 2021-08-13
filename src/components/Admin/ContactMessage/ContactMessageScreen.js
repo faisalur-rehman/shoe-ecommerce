@@ -1,6 +1,7 @@
 import React from "react";
 import "../../Admin/Header/AdminStyle.css";
-function ContactMessageScreen() {
+function ContactMessageScreen({ data }) {
+  console.log("data", data);
   return (
     <>
       <section
@@ -19,11 +20,13 @@ function ContactMessageScreen() {
                     <th>Email</th>
                     <th>Message</th>
                   </tr>
-                  <tr>
-                    <td>this</td>
-                    <td></td>
-                    <td></td>
-                  </tr>
+                  {data.contacts.map((contact) => (
+                    <tr key={contact._id}>
+                      <td></td>
+                      <td></td>
+                      <td>{contact.message}</td>
+                    </tr>
+                  ))}
                 </tbody>
               </table>
             </div>
