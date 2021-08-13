@@ -12,8 +12,10 @@ const Contact = () => {
   async function handleSubmit({ formValues }) {
     console.log("form", formValues);
     try {
-      await request(...formValues);
-    } catch (_) {}
+      await request({ ...formValues });
+    } catch (error) {
+      console.log(error);
+    }
   }
   return (
     <div>

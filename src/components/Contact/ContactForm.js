@@ -4,6 +4,7 @@ import Sidebar from "../Sidebar/Sidebar";
 import mobileLogo from "../../image/mobile_logo.png";
 import "./Contact.css";
 import AppForm from "../AppForm/AppForm";
+import { Field } from "formik";
 
 const ContactForm = ({ initialValues, handleSubmit, data, error }) => {
   const [state, setstate] = useState("");
@@ -30,6 +31,7 @@ export default ContactForm;
 
 function FormFields({ state, handleClose, handleClick, data, error }) {
   console.log("error", error);
+  console.log("data", data);
   return (
     <div>
       <section id="greater_then_mobile">
@@ -65,17 +67,16 @@ function FormFields({ state, handleClose, handleClick, data, error }) {
                 </p>
               </div>
               <div class="contact_us_container">
-                <form>
-                  <div class="contact_us_fields">
-                    <div class="contact_us_input_field">
-                      <label>text</label>
-                      <textarea></textarea>
-                    </div>
-                    <div class="contact_us_submit_btn">
-                      <button type="submit">send</button>
-                    </div>
+                <div class="contact_us_fields">
+                  <div class="contact_us_input_field">
+                    <label>text</label>
+                    <Field name="message" as="textarea"></Field>
                   </div>
-                </form>
+                  <p style={{ color: "green" }}>{data && data.message}</p>
+                  <div class="contact_us_submit_btn">
+                    <button type="submit">send</button>
+                  </div>
+                </div>
               </div>
             </div>
           </section>

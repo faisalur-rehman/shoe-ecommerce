@@ -215,7 +215,7 @@ header .insta_icon i {
   line-height: 20px;
   text-align: center;
 }
-.contact_us_section .contact_us_form form .contact_us_fields {
+.contact_us_section .contact_us_form .contact_us_fields {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -223,14 +223,12 @@ header .insta_icon i {
 
 .contact_us_section
   .contact_us_form
-  form
   .contact_us_fields
   .contact_us_input_field {
   width: 100%;
 }
 .contact_us_section
   .contact_us_form
-  form
   .contact_us_fields
   .contact_us_input_field
   label {
@@ -245,7 +243,6 @@ header .insta_icon i {
 }
 .contact_us_section
   .contact_us_form
-  form
   .contact_us_fields
   .contact_us_input_field
   input {
@@ -264,7 +261,6 @@ header .insta_icon i {
 }
 .contact_us_section
   .contact_us_form
-  form
   .contact_us_fields
   .contact_us_input_field
   textarea {
@@ -283,11 +279,7 @@ header .insta_icon i {
   resize: none;
 }
 
-.contact_us_section
-  .contact_us_form
-  form
-  .contact_us_fields
-  .contact_us_submit_btn {
+.contact_us_section .contact_us_form .contact_us_fields .contact_us_submit_btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -296,7 +288,6 @@ header .insta_icon i {
 }
 .contact_us_section
   .contact_us_form
-  form
   .contact_us_fields
   .contact_us_submit_btn
   button {
