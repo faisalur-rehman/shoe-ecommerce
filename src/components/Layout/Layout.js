@@ -1,10 +1,10 @@
 import React from "react";
-import Sidebar from "../Sidebar/Sidebar";
+import Header from "../Admin/Header/Header";
 
 const Layout = ({ children }) => {
   return (
     <div>
-      <Sidebar />
+      <Header />
       {children}
     </div>
   );

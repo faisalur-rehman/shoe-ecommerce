@@ -18,6 +18,13 @@ import Payment from "./components/Payment/Payment";
 import StripeContainer from "./components/Stripe/StripeContainer";
 import Contact from "./components/Contact/Contact";
 import MyShoes from "./components/MyShoes/MyShoes";
+import Header from "./components/Admin/Header/Header";
+import AddProduct from "./components/Admin/AddProduct/AddProduct";
+import AllProduct from "./components/Admin/AllProduct/AllProduct";
+import ContactMessage from "./components/Admin/ContactMessage/ContactMessage";
+import OrderHistory from "./components/Admin/OrderHistory/OrderHistory";
+import AdminRaffleProduct from "./components/Admin/AdminRaffleProduct/AdminRaffleProduct";
+import UpdateProduct from "./components/Admin/UpdateProduct/UpdateProduct";
 
 function App() {
   return (
@@ -78,6 +85,30 @@ function App() {
           </Route>
           <Route path="/stripe/:id">
             <StripeContainer />
+          </Route>
+          <Route path="/admin">
+            <Header />
+          </Route>
+          {
+            //admin routes
+          }
+          <Route path="/add-product">
+            <AddProduct />
+          </Route>
+          <Route path="/all-products">
+            <AllProduct />
+          </Route>
+          <Route exact path="/contact-message">
+            <ContactMessage />
+          </Route>
+          <Route exact path="/orderHistory">
+            <OrderHistory />
+          </Route>
+          <Route exact path="/admin-raffle">
+            <AdminRaffleProduct />
+          </Route>
+          <Route exact path="/update-product">
+            <UpdateProduct />
           </Route>
         </Switch>
       </Router>
