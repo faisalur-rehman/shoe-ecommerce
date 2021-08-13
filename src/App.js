@@ -1,7 +1,6 @@
 import "./App.css";
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import Main from "./components/Main/Main";
-import MyShoes from "./components/MyShoes/MyShoes";
 import Impressum from "./components/Impressum/Impressum";
 import Shipping from "./components/Shipping/Shipping";
 import Privacy from "./components/Privacy/Privacy";
@@ -18,6 +17,7 @@ import SingleProduct from "./components/ProductRaffle/SingleProduct";
 import Payment from "./components/Payment/Payment";
 import StripeContainer from "./components/Stripe/StripeContainer";
 import Contact from "./components/Contact/Contact";
+import MyShoes from "./components/MyShoes/MyShoes";
 
 function App() {
   return (
@@ -51,6 +51,7 @@ function App() {
           <Route path="/account">
             <Account />
           </Route>
+
           <Route path="/myshoes">
             <MyShoes />
           </Route>

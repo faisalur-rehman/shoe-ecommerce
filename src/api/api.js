@@ -54,3 +54,7 @@ export function fillRaffle(data) {
 export function addContactMessage(data) {
   return api.post(`/contact/add`, { ...data }, config);
 }
+
+export function allOrderHistories() {
+  return api.get(`/order-history/get-all-for-auth-user`, config);
+}
