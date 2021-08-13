@@ -13,10 +13,12 @@ const initialValues = {
   city: "",
   country: "",
   gender: "",
+  instagram: "",
 };
 
 const RaffleForm = () => {
   const { data, request } = useApi(api.getRaffle);
+  const fillRaffle = useApi(api.fillRaffle);
   useEffect(() => {
     async function fetchData() {
       try {
@@ -29,8 +31,14 @@ const RaffleForm = () => {
     //eslint-disable-next-line
   }, []);
 
-  function handleSubmit({ formValues }) {
+  async function handleSubmit({ formValues }) {
     console.log(formValues);
+    try {
+      await fillRaffle.request({
+        ...formValues,
+        articleId: data.articles[0]._id,
+      });
+    } catch (_) {}
   }
 
   return (
@@ -39,6 +47,7 @@ const RaffleForm = () => {
         data={data}
         initialValues={initialValues}
         handleSubmit={handleSubmit}
+        error={fillRaffle.error}
       />
     </div>
   );

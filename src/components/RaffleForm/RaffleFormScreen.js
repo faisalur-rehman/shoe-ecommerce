@@ -1,8 +1,5 @@
 import React, { useState } from "react";
 import "./RaffleForm.css";
-import raffleOne from "../../image/raffle_detail_one.png";
-import raffleTwo from "../../image/raffle_detail_two.png";
-import raffleThree from "../../image/raffle_detail_three.png";
 import mobileLogo from "../../image/mobile_logo.png";
 import { Field } from "formik";
 import ResponsiveNavbar from "../ResponsiveNavbar/ResponsiveNavbar";
@@ -32,7 +29,7 @@ const RaffleFormScreen = ({ data, initialValues, handleSubmit, error }) => {
 export default RaffleFormScreen;
 
 function FormFields({ state, handleClose, handleClick, data, error }) {
-  // data.articles[0].availableSizes.map((size) => console.log(size));
+  console.log("error", error);
   return (
     <div>
       <section id="greater_then_mobile">
@@ -152,9 +149,8 @@ function FormFields({ state, handleClose, handleClick, data, error }) {
                         <label>country</label>
                         <Field name="country" type="text" placeholder="" />
                       </div>
-                      <div class="">
-                        <label>Gender</label>
-                        <br />
+                      <div role="group" aria-labelledby="my-radio-group">
+                        <div>Gender</div>
                         <label>
                           <Field type="radio" name="gender" value="male" />
                           Male
@@ -168,11 +164,7 @@ function FormFields({ state, handleClose, handleClick, data, error }) {
                       <div class="">
                         <label>size</label>
                         <br />
-                        <Field
-                          as="select"
-                          name="availableSizes"
-                          className="form-control"
-                        >
+                        <Field as="select" name="size" className="form-control">
                           <option value="" selected disabled>
                             Select
                           </option>
@@ -186,7 +178,7 @@ function FormFields({ state, handleClose, handleClick, data, error }) {
                       </div>
                       <div class="raffle_purchase_form_input_field">
                         <label>instagram account name</label>
-                        <Field type="text" placeholder="" />
+                        <Field name="instagram" type="text" placeholder="" />
                       </div>
                       <div class="raffle_purchase_form_check_box">
                         <a href="#">terms & conditions</a>
@@ -215,7 +207,7 @@ function FormFields({ state, handleClose, handleClick, data, error }) {
                       </div>
 
                       <div class="raffle_purchase_form_submit_btn">
-                        <button>subscribe</button>
+                        <button>Subscribe</button>
                       </div>
                     </div>
                   </div>
@@ -344,11 +336,7 @@ function FormFields({ state, handleClose, handleClick, data, error }) {
                     <div class="">
                       <label>size</label>
                       <br />
-                      <Field
-                        as="select"
-                        name="availableSizes"
-                        className="form-control"
-                      >
+                      <Field as="select" name="size" className="form-control">
                         <option value="" selected disabled>
                           Select
                         </option>
@@ -362,7 +350,7 @@ function FormFields({ state, handleClose, handleClick, data, error }) {
                     </div>
                     <div class="raffle_purchase_form_input_field">
                       <label>instagram account name</label>
-                      <Field type="text" placeholder="" />
+                      <Field name="instagram" type="text" placeholder="" />
                     </div>
                     <div class="raffle_purchase_form_check_box">
                       <a href="#">terms & conditions</a>

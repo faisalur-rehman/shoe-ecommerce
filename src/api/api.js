@@ -48,3 +48,9 @@ export function getSingleOrder(data) {
 export function confirmPayment(data) {
   return api.patch(`/order-history/confirm-payment`, { ...data }, config);
 }
+export function fillRaffle(data) {
+  return api.post(`/raffle/add-form`, { ...data }, config);
+}
+export function addContactMessage(data) {
+  return api.post(`/contact/add`, { ...data }, config);
+}
