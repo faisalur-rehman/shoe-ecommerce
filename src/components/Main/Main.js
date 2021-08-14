@@ -135,24 +135,24 @@ const Main = () => {
         </div>
 
         <div class="mobile_footer">
-          <a class="mobile_footer_content" href="impressum.html">
+          <Link to="/impressum" class="mobile_footer_content">
             <div class="mobile_footer_field">
               <span>impressum</span>
               <small>impressum</small>
             </div>
-          </a>
-          <a class="mobile_footer_content" href="shipping.html">
+          </Link>
+          <Link to="/shipping" class="mobile_footer_content">
             <div class="mobile_footer_field">
               <span>Shipping</span>
               <small>Shipping</small>
             </div>
-          </a>
-          <a class="mobile_footer_content" href="contact.html">
+          </Link>
+          <Link to="/contact" class="mobile_footer_content">
             <div class="mobile_footer_field">
               <span>contact</span>
               <small>contact</small>
             </div>
-          </a>
+          </Link>
           <a class="mobile_footer_content" href="#">
             <div class="mobile_footer_field">
               <div class="insta_icon">
