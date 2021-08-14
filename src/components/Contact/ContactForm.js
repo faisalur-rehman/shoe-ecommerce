@@ -5,6 +5,7 @@ import mobileLogo from "../../image/mobile_logo.png";
 import "./Contact.css";
 import AppForm from "../AppForm/AppForm";
 import { Field } from "formik";
+import ResponsiveNavbar from "../ResponsiveNavbar/ResponsiveNavbar";
 
 const ContactForm = ({ initialValues, handleSubmit, data, error }) => {
   const [state, setstate] = useState("");
@@ -131,6 +132,7 @@ function FormFields({ state, handleClose, handleClick, data, error }) {
           </div>
         </section>
       </section>
+      <ResponsiveNavbar state={state} handleClose={handleClose} />
     </div>
   );
 }

@@ -1,7 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 const ResponsiveNavbar = ({ state, handleClose }) => {
+  const history = useHistory();
+  function handleLogout() {
+    localStorage.removeItem("token");
+    history.push("/signin");
+  }
   return (
     <section class={`responsive_nav_bar ${state}`}>
       <section class="responsive_nav_page_section">
@@ -39,23 +44,35 @@ const ResponsiveNavbar = ({ state, handleClose }) => {
               <Link to="/raffle">RAFFLE</Link>
             </p>
             <p>
-              <Link to="/user-raffle">YOUR RAFFLE</Link>
-            </p>
-            <p>
               {" "}
               <Link to="/allProducts">SNEAKERS</Link>
             </p>
-            <p>
-              {" "}
-              <Link to="/signup">Sign up</Link>
-            </p>
-            <p>
-              {" "}
-              <Link to="/account">Account</Link>
-            </p>
-            <p>
-              <Link to="/signin">login</Link>
-            </p>
+            {localStorage.getItem("token") && (
+              <>
+                <p>
+                  <Link to="/user-raffle">YOUR RAFFLE</Link>
+                </p>
+                <p>
+                  {" "}
+                  <Link to="/account">Account</Link>
+                </p>
+              </>
+            )}
+            {localStorage.getItem("token") ? (
+              <p>
+                {" "}
+                <Link onClick={handleLogout}>Logout</Link>
+              </p>
+            ) : (
+              <>
+                <p>
+                  <Link to="/signup">Sign up</Link>
+                </p>
+                <p>
+                  <Link to="/signin">login</Link>
+                </p>
+              </>
+            )}
           </div>
           <div class="responsive_nav_details_secion_two">
             <ul>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import homeBanner from "../../image/home_banner.png";
 import homeArrow from "../../image/home_page_arrow.png";
 import mobileLogo from "../../image/mobile_logo.png";
