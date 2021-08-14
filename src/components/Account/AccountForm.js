@@ -31,6 +31,7 @@ const AccountForm = ({ initialValues, handleSubmit, data, error }) => {
 export default AccountForm;
 
 function FormFields({ state, handleClose, handleClick, error, data }) {
+  console.log("data", data);
   return (
     <div>
       <section id="greater_then_mobile">
@@ -43,7 +44,7 @@ function FormFields({ state, handleClose, handleClick, error, data }) {
 
           <div class="setting_nav_section">
             <div class="setting_page_list">
-              <h2>Marius Müller</h2>
+              <h2>{data.name}</h2>
             </div>
             <div class="setting_nav">
               <div class="setting_nav_list">
@@ -136,7 +137,7 @@ function FormFields({ state, handleClose, handleClick, error, data }) {
 
         <div class="setting_nav_section">
           <div class="setting_page_list">
-            <h2>Marius Müller</h2>
+            <h2>{data.name}</h2>
           </div>
           <div class="setting_nav">
             <div class="setting_nav_list">

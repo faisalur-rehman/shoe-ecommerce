@@ -20,7 +20,6 @@ const Account = () => {
     async function fetchData() {
       try {
         const { data } = await getProfile.request();
-        console.log("profile", data);
         initialValues.masterCardNumber = data.masterCardNumber;
         initialValues.billingAddress = data.billingAddress;
         initialValues.deliveryAddress = data.deliveryAddress;
@@ -49,12 +48,14 @@ const Account = () => {
   }
   return (
     <div>
-      <AccountForm
-        initialValues={initialValues}
-        handleSubmit={handleSubmit}
-        data={updateProfile.data}
-        error={updateProfile.error}
-      />
+      {getProfile.data && (
+        <AccountForm
+          initialValues={initialValues}
+          handleSubmit={handleSubmit}
+          data={getProfile.data}
+          error={updateProfile.error}
+        />
+      )}
     </div>
   );
 };

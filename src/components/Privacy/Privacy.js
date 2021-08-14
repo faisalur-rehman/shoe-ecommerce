@@ -13,11 +13,18 @@ const Privacy = () => {
     setstate("");
   }
   return (
-    <div style={{ backgroundColor: "" }}>
+    <div>
       <section id="greater_then_mobile">
         <section class="privacy_page_section">
-          <Sidebar />
-          <section class="privacy_body_section">
+          <Sidebar
+            state={state}
+            handleClick={handleClick}
+            handleClose={handleClose}
+          />
+          <section
+            class="privacy_body_section"
+            style={{ backgroundColor: "black" }}
+          >
             <div class="privacy_container">
               <div class="privacy_section_heading">
                 <h3>privacy</h3>
@@ -123,7 +130,10 @@ const Privacy = () => {
           </div>
         </div>
 
-        <section class="privacy_body_section" style={{ backgroundColor: "" }}>
+        <section
+          class="privacy_body_section"
+          style={{ backgroundColor: "black" }}
+        >
           <div class="privacy_container">
             <div class="privacy_section_heading">
               <h3>privacy</h3>
