@@ -6,7 +6,7 @@ import mobileLogo from "../../image/mobile_logo.png";
 import { Link } from "react-router-dom";
 import ResponsiveNavbar from "../ResponsiveNavbar/ResponsiveNavbar";
 
-const MyShoesScreen = ({ data }) => {
+const MyShoesScreen = ({ data, profileData }) => {
   const [state, setstate] = useState("");
   function handleClick() {
     setstate("responsive_bar");
@@ -27,7 +27,7 @@ const MyShoesScreen = ({ data }) => {
           <section class="myshoes_body">
             <div class="myshoes_nav_section">
               <div class="myshoes_page_list">
-                <h2>Marius Müller</h2>
+                <h2>{profileData.name}</h2>
               </div>
               <div class="myshoes_nav">
                 <div class="myshoes_nav_list">
@@ -111,7 +111,7 @@ const MyShoesScreen = ({ data }) => {
         </div>
         <div class="myshoes_nav_section">
           <div class="myshoes_page_list">
-            <h2>Marius Müller</h2>
+            <h2>{profileData.name}</h2>
           </div>
           <div class="myshoes_nav">
             <div class="myshoes_nav_list">

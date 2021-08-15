@@ -17,7 +17,11 @@ const Shipping = () => {
     <div>
       <section id="greater_then_mobile">
         <section class="shipping_page_section">
-          <Sidebar />
+          <Sidebar
+            state={state}
+            handleClick={handleClick}
+            handleClose={handleClose}
+          />
 
           <div class="shipping_footer_section_two">
             <div class="shipping_footer">

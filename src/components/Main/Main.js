@@ -66,24 +66,24 @@ const Main = () => {
                 </div>
               </div>
               <div class="explore_new">
-                <a href="sneaker.html">
+                <Link to="/allProducts">
                   <span>explore new sneakers</span>
                   <figure>
                     <img src={homeArrow} alt="" />
                   </figure>
-                </a>
+                </Link>
               </div>
             </section>
           </div>
           <div class="home_page_footer">
             <div class="footer_content">
-              <a href="impressum.html">impressum</a>
+              <Link to="/impressum">impressum</Link>
             </div>
             <div class="footer_content">
-              <a href="shipping.html">shipping</a>
+              <Link to="/shipping">shipping</Link>
             </div>
             <div class="footer_content">
-              <a href="contact.html">contact</a>
+              <Link to="/contact">contact</Link>
             </div>
           </div>
         </section>

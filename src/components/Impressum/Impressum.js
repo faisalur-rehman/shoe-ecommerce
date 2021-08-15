@@ -17,7 +17,11 @@ const Impressum = () => {
     <div>
       <section id="greater_then_mobile">
         <section class="impressum_page_section">
-          <Sidebar />
+          <Sidebar
+            state={state}
+            handleClick={handleClick}
+            handleClose={handleClose}
+          />
 
           <div class="impressum_footer_section_one">
             <div class="impressum_footer_section_one_list">

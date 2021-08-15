@@ -46,6 +46,7 @@ const Profile = () => {
   return (
     <div>
       <ProfileForm
+        profileData={getProfile.data}
         handleSubmit={handleSubmit}
         initialValues={initialValues}
         data={updateProfile.data}

@@ -10,7 +10,7 @@ import { Field } from "formik";
 const ProfileForm = ({
   initialValues,
   handleSubmit,
-  response,
+  profileData,
   error,
   data,
 }) => {
@@ -31,6 +31,7 @@ const ProfileForm = ({
         handleClick={handleClick}
         data={data}
         error={error}
+        profileData={profileData}
       />
     </AppForm>
   );
@@ -38,7 +39,14 @@ const ProfileForm = ({
 
 export default ProfileForm;
 
-function FormFields({ state, handleClose, handleClick, data, error }) {
+function FormFields({
+  state,
+  handleClose,
+  handleClick,
+  data,
+  error,
+  profileData,
+}) {
   return (
     <div>
       <section id="greater_then_mobile">
@@ -51,7 +59,7 @@ function FormFields({ state, handleClose, handleClick, data, error }) {
 
           <div class="profile_nav_section">
             <div class="profile_page_list">
-              <h2>Marius Müller</h2>
+              <h2>{profileData.name}</h2>
             </div>
             <div class="profile_nav">
               <div class="profile_nav_list">
@@ -166,7 +174,7 @@ function FormFields({ state, handleClose, handleClick, data, error }) {
 
         <div class="profile_nav_section">
           <div class="profile_page_list">
-            <h2>Marius Müller</h2>
+            <h2>{profileData.name}</h2>
           </div>
           <div class="profile_nav">
             <div class="profile_nav_list">
