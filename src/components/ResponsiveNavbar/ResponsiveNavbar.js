@@ -20,12 +20,12 @@ const ResponsiveNavbar = ({ state, handleClose }) => {
           <div class="responsive_logo">
             <span>REACH YOUR</span>
             <span class="responsive_logo_middle_part">
-              <Link to="/">
+              <a href="/">
                 <small>R</small>
                 <small>Y</small>
                 <small>H</small>
                 <small>L</small>
-              </Link>
+              </a>
             </span>
             <span>HIGHEST LEVEL</span>
           </div>
@@ -38,7 +38,7 @@ const ResponsiveNavbar = ({ state, handleClose }) => {
         <section class="responsive_nav_details">
           <div class="responsive_nav_details_secion_one">
             <p>
-              <Link to="/">start</Link>
+              <a href="/">start</a>
             </p>
             <p>
               <Link to="/raffle">RAFFLE</Link>
