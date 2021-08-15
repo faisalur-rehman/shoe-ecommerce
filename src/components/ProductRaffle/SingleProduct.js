@@ -17,6 +17,9 @@ const SingleProduct = () => {
   const createOrder = useApi(api.createOrder);
   const history = useHistory();
   useEffect(() => {
+    if (!localStorage.getItem("token")) {
+      history.push("/signin");
+    }
     async function fetchData() {
       try {
         await getArticle.request({ articleId: id });
