@@ -57,10 +57,6 @@ function FormFields({ state, handleClose, handleClick, data, error }) {
                 />
               </div>
 
-              <div class="custom_scroll">
-                <div class="scroll_section"></div>
-              </div>
-
               <div class="select_single_sneaker_properties">
                 <p>STYLE {data.article.style}</p>
                 <p>{data.article.description}</p>
@@ -94,11 +90,23 @@ function FormFields({ state, handleClose, handleClick, data, error }) {
                 </div>
                 <div class="raffle_purchase_form_input_field">
                   <label>Shipping Address</label>
-                  <Field name="shippingAddress" type="text" placeholder="" />
+                  <br />
+                  <Field
+                    name="shippingAddress"
+                    type="text"
+                    placeholder=""
+                    className="form-control"
+                  />
                 </div>
                 <div class="raffle_purchase_form_input_field">
                   <label>Shipping State</label>
-                  <Field name="shippingState" type="text" placeholder="" />
+                  <br />
+                  <Field
+                    name="shippingState"
+                    type="text"
+                    placeholder=""
+                    className="form-control"
+                  />
                 </div>
               </div>
               <p style={{ color: "red" }}>{error.data && error.data.message}</p>
@@ -141,10 +149,6 @@ function FormFields({ state, handleClose, handleClick, data, error }) {
               />
             </div>
 
-            <div class="custom_scroll">
-              <div class="scroll_section"></div>
-            </div>
-
             <div class="select_single_sneaker_properties">
               <p>STYLE {data.article.style}</p>
               <p>{data.article.description}</p>
@@ -173,11 +177,23 @@ function FormFields({ state, handleClose, handleClick, data, error }) {
               </div>
               <div class="raffle_purchase_form_input_field">
                 <label>Shipping Address</label>
-                <Field name="shippingAddress" type="text" placeholder="" />
+                <br />
+                <Field
+                  name="shippingAddress"
+                  type="text"
+                  placeholder=""
+                  className="form-control"
+                />
               </div>
               <div class="raffle_purchase_form_input_field">
                 <label>Shipping State</label>
-                <Field name="shippingState" type="text" placeholder="" />
+                <br />
+                <Field
+                  name="shippingState"
+                  type="text"
+                  placeholder=""
+                  className="form-control"
+                />
               </div>
             </div>
             <p style={{ color: "red" }}>{error.data && error.data.message}</p>

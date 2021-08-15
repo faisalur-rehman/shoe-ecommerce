@@ -14,11 +14,14 @@ const Conditions = () => {
   }
   return (
     <div>
-      <section id="greater_then_mobile" style={{ backgroundColor: "black" }}>
+      <section id="greater_then_mobile">
         <section class="agb_page_section">
           <Sidebar />
 
-          <section class="agb_body_section">
+          <section
+            class="agb_body_section"
+            style={{ backgroundColor: "black" }}
+          >
             <div class="agb_container">
               <div class="agb_section_heading">
                 <h3>agb</h3>
