@@ -3,6 +3,7 @@ import Sidebar from "../Sidebar/Sidebar";
 import mobileLogo from "../../image/mobile_logo.png";
 import "./Conditions.css";
 import ResponsiveNavbar from "../ResponsiveNavbar/ResponsiveNavbar";
+import PrivacyHeader from "../PrivacyHeader/PrivacyHeader";
 
 const Conditions = () => {
   const [state, setstate] = useState("");
@@ -16,7 +17,11 @@ const Conditions = () => {
     <div>
       <section id="greater_then_mobile">
         <section class="agb_page_section">
-          <Sidebar />
+          <PrivacyHeader
+            state={state}
+            handleClick={handleClick}
+            handleClose={handleClose}
+          />
 
           <section
             class="agb_body_section"

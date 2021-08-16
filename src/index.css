@@ -150,7 +150,7 @@ header {
   align-items: center;
   padding: 10px 20px;
   border-right: 1px solid #000000;
-  margin-right: 100px;
+  /* margin-right: 100px; */
   float: left;
 }
 header .nav_plus_shooping .nav_icon i {
@@ -753,4 +753,16 @@ width: 100%;
 .stripe-text {
   width: 40%;
   margin: 5% auto 20px;
+}
+
+#p-icon {
+  color: white !important;
+}
+
+#p-header {
+  border-color: white;
+  background-color: black;
+}
+#p-text {
+  color: rgba(198, 198, 198, 0.14);
 }

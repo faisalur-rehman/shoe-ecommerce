@@ -3,6 +3,7 @@ import Sidebar from "../Sidebar/Sidebar";
 import "./Privacy.css";
 import mobileLogo from "../../image/mobile_logo.png";
 import ResponsiveNavbar from "../ResponsiveNavbar/ResponsiveNavbar";
+import PrivacyHeader from "../PrivacyHeader/PrivacyHeader";
 
 const Privacy = () => {
   const [state, setstate] = useState("");
@@ -16,7 +17,7 @@ const Privacy = () => {
     <div>
       <section id="greater_then_mobile">
         <section class="privacy_page_section">
-          <Sidebar
+          <PrivacyHeader
             state={state}
             handleClick={handleClick}
             handleClose={handleClose}

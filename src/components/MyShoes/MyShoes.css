@@ -13,6 +13,7 @@ body {
   float: left;
   width: 100%;
   background-color: #c0c0c0;
+  height: 100%;
 }
 #greater_then_mobile {
   display: block;
