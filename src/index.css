@@ -769,3 +769,19 @@ width: 100%;
 #p-text {
   color: rgba(198, 198, 198, 0.14);
 }
+@media screen and (max-width: 700px) {
+  .stripe-text,
+  .Form-Group,
+  .pay-btn,
+  .StripeElement {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .stripe-text,
+  .Form-Group,
+  .pay-btn,
+  .StripeElement {
+    width: 95%;
+  }
+}

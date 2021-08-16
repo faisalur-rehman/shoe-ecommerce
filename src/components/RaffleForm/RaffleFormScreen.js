@@ -161,7 +161,18 @@ function FormFields({
                       </div>
                       <div class="raffle_purchase_form_input_field">
                         <label>State</label>
-                        <Field name="country" type="text" placeholder="" />
+                        <Field
+                          as="select"
+                          name="country"
+                          className="form-control"
+                        >
+                          <option value="" selected disabled>
+                            Select
+                          </option>
+
+                          <option value="Switzerland">Switzerland</option>
+                          <option value="Liechtenstein">Liechtenstein</option>
+                        </Field>
                       </div>
 
                       <div class="">
@@ -338,7 +349,18 @@ function FormFields({
                     </div>
                     <div class="raffle_purchase_form_input_field">
                       <label>State</label>
-                      <Field name="country" type="text" placeholder="" />
+                      <Field
+                        as="select"
+                        name="country"
+                        className="form-control"
+                      >
+                        <option value="" selected disabled>
+                          Select
+                        </option>
+
+                        <option value="Switzerland">Switzerland</option>
+                        <option value="Liechtenstein">Liechtenstein</option>
+                      </Field>
                     </div>
 
                     <div class="">

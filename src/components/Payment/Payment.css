@@ -110,6 +110,7 @@ header .insta_icon i {
   align-items: center;
   flex-direction: column;
   border-right: 1px solid #000000;
+  padding-top: 40px !important;
 }
 .product_purchased_section figure {
   width: 100%;

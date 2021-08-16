@@ -102,11 +102,17 @@ function FormFields({ state, handleClose, handleClick, data, error }) {
                   <label>Shipping State</label>
                   <br />
                   <Field
+                    as="select"
                     name="shippingState"
-                    type="text"
-                    placeholder=""
                     className="form-control"
-                  />
+                  >
+                    <option value="" selected disabled>
+                      Select
+                    </option>
+
+                    <option value="Switzerland">Switzerland</option>
+                    <option value="Liechtenstein">Liechtenstein</option>
+                  </Field>
                 </div>
               </div>
               <p style={{ color: "red" }}>{error.data && error.data.message}</p>

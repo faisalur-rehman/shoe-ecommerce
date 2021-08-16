@@ -45,13 +45,15 @@ const Profile = () => {
   }
   return (
     <div>
-      <ProfileForm
-        profileData={getProfile.data}
-        handleSubmit={handleSubmit}
-        initialValues={initialValues}
-        data={updateProfile.data}
-        error={updateProfile.error}
-      />
+      {getProfile.data && (
+        <ProfileForm
+          profileData={getProfile.data}
+          handleSubmit={handleSubmit}
+          initialValues={initialValues}
+          data={updateProfile.data}
+          error={updateProfile.error}
+        />
+      )}
     </div>
   );
 };
