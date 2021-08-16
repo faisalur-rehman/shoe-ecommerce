@@ -175,9 +175,8 @@ function FormFields({
                         </Field>
                       </div>
 
-                      <div class="">
+                      <div class="raffle_purchase_form_input_field">
                         <label>size</label>
-                        <br />
                         <Field as="select" name="size" className="form-control">
                           <option value="" selected disabled>
                             Select
@@ -190,7 +189,6 @@ function FormFields({
                           ))}
                         </Field>
                       </div>
-                      <br />
 
                       <div class="raffle_purchase_form_input_field">
                         <label>instagram account name</label>

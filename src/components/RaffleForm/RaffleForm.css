@@ -190,7 +190,8 @@ header .insta_icon i {
 .raffle_purchase_form
   .raffle_purchase_form_fields
   .raffle_purchase_form_input_field
-  input {
+  input,
+.raffle_purchase_form_input_field select {
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
   line-height: 1.5;
