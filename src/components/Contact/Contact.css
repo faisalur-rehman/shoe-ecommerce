@@ -67,6 +67,10 @@ body {
   grid-template-areas: ". . .";
   position: absolute;
   height: 100%;
+  animation: fadein 3s;
+  -moz-animation: fadein 3s; /* Firefox */
+  -webkit-animation: fadein 3s; /* Safari and Chrome */
+  -o-animation: fadein 3s; /* Opera */
 }
 /* Header start */
 header {
@@ -165,6 +169,10 @@ header .insta_icon i {
   height: 100vh;
   overflow-y: scroll;
   scrollbar-width: none;
+  animation: fadein 3s;
+  -moz-animation: fadein 3s; /* Firefox */
+  -webkit-animation: fadein 3s; /* Safari and Chrome */
+  -o-animation: fadein 3s; /* Opera */
 }
 .contact_us_section::-webkit-scrollbar {
   display: none;
