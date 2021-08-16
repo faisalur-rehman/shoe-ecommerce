@@ -124,53 +124,45 @@ const ProductsScreen = ({ data }) => {
             <div class="sneaker_section_heading">
               <h3>sneakers</h3>
             </div>
-            <div
-              id="carouselExampleControls"
-              class="carousel slide"
-              data-ride="carousel"
-            >
+            <div id="my-carousel" class="carousel slide" data-ride="carousel">
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <section class="sneakers_list">
-                    <section class="sneakers_list">
-                      {data.articles.map((article) => (
-                        <div class="single_sneaker">
-                          <Link to={`/raffle-product/${article._id}`}>
-                            <img
-                              src={`https://shoe-e-store-restapi.herokuapp.com/${article.image}`}
-                              alt=""
-                            />
-                          </Link>
-                          <p>{article.name}</p>
-                          <small> {article.price}chf</small>
-                        </div>
-                      ))}
-                    </section>
+                    {data.articles.map((article) => (
+                      <div class="single_sneaker">
+                        <Link to={`/raffle-product/${article._id}`}>
+                          <img
+                            src={`https://shoe-e-store-restapi.herokuapp.com/${article.image}`}
+                            alt=""
+                          />
+                        </Link>
+                        <p>{article.name}</p>
+                        <small> {article.price}chf</small>
+                      </div>
+                    ))}
                   </section>
                 </div>
                 <div class="carousel-item">
                   <section class="sneakers_list">
-                    <section class="sneakers_list">
-                      {data.articles.map((article) => (
-                        <div class="single_sneaker">
-                          <Link to={`/raffle-product/${article._id}`}>
-                            <img
-                              src={`https://shoe-e-store-restapi.herokuapp.com/${article.image}`}
-                              alt=""
-                            />
-                          </Link>
-                          <p>{article.name}</p>
-                          <small> {article.price}chf</small>
-                        </div>
-                      ))}
-                    </section>
+                    {data.articles.map((article) => (
+                      <div class="single_sneaker">
+                        <Link to={`/raffle-product/${article._id}`}>
+                          <img
+                            src={`https://shoe-e-store-restapi.herokuapp.com/${article.image}`}
+                            alt=""
+                          />
+                        </Link>
+                        <p>{article.name}</p>
+                        <small> {article.price}chf</small>
+                      </div>
+                    ))}
                   </section>
                 </div>
               </div>
               <div class="next_btn">
                 <a
                   class="carousel-control-next"
-                  href="#carouselExampleControls"
+                  href="#my-carousel"
                   role="button"
                   data-slide="next"
                 >
