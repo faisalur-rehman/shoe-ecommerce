@@ -13,10 +13,10 @@ body {
   float: left;
   width: 100%;
   background-color: #c0c0c0;
-  animation: fadein 3s;
-  -moz-animation: fadein 3s; /* Firefox */
-  -webkit-animation: fadein 3s; /* Safari and Chrome */
-  -o-animation: fadein 3s; /* Opera */
+  animation: fadein 0.01s;
+  -moz-animation: fadein 0.01s;
+  -webkit-animation: fadein 0.01s;
+  -o-animation: fadein 0.01s;
 }
 
 @keyframes fadein {

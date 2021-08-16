@@ -14,10 +14,6 @@ body {
   width: 100%;
   background-color: #c0c0c0;
   height: 100vh;
-  animation: fadein 3s;
-  -moz-animation: fadein 3s; /* Firefox */
-  -webkit-animation: fadein 3s; /* Safari and Chrome */
-  -o-animation: fadein 3s; /* Opera */
 }
 
 @keyframes fadein {
@@ -186,9 +182,9 @@ header .insta_icon i {
   scrollbar-width: none;
   overflow-y: scroll;
   animation: fadein 3s;
-  -moz-animation: fadein 3s; /* Firefox */
-  -webkit-animation: fadein 3s; /* Safari and Chrome */
-  -o-animation: fadein 3s; /* Opera */
+  -moz-animation: fadein 3s;
+  -webkit-animation: fadein 3s;
+  -o-animation: fadein 3s;
 }
 .impressum_body_section::-webkit-scrollbar {
   display: none;
