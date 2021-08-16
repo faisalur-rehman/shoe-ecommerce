@@ -358,6 +358,7 @@ header .insta_icon i {
   flex-direction: column;
   width: 100%;
   padding-left: 60px;
+  gap: 20px 0;
 }
 .responsive_nav_details_secion_one span {
   margin-bottom: 50px;

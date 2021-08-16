@@ -86,7 +86,7 @@ const Conditions = () => {
               </div>
 
               <div class="agb_down_arrow">
-                <a href="#">
+                <a>
                   <i class="fas fa-angle-double-down"></i>
                 </a>
               </div>
@@ -180,7 +180,7 @@ const Conditions = () => {
             </div>
 
             <div class="agb_down_arrow">
-              <a href="#">
+              <a>
                 <i class="fas fa-angle-double-down"></i>
               </a>
             </div>

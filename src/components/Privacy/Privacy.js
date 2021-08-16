@@ -105,7 +105,7 @@ const Privacy = () => {
               </div>
 
               <div class="privacy_down_arrow">
-                <a href="#">
+                <a>
                   <i class="fas fa-angle-double-down"></i>
                 </a>
               </div>
@@ -221,7 +221,7 @@ const Privacy = () => {
             </div>
 
             <div class="privacy_down_arrow">
-              <a href="#">
+              <a>
                 <i class="fas fa-angle-double-down"></i>
               </a>
             </div>

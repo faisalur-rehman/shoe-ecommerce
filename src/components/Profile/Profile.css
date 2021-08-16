@@ -179,6 +179,15 @@ header .insta_icon i {
   .profile_page_form
   .profile_page_fields
   .profile_page_input_field
+  button {
+  background-color: #c0c0c0;
+  border: 1px solid black;
+  padding: 10px 15px;
+}
+.profile_section
+  .profile_page_form
+  .profile_page_fields
+  .profile_page_input_field
   label {
   width: 100%;
   display: flex;
