@@ -126,9 +126,12 @@ body {
   display: none;
 }
 .carousel {
-  display: flex;
+  /* display: flex; */
   justify-content: space-between;
   height: 100%;
+}
+.index_slider {
+  display: flex !important;
 }
 .carousel-control-next-icon {
   width: 100% !important;

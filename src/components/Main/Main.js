@@ -45,7 +45,7 @@ const Main = () => {
             <section class="home_page_body">
               <div
                 id="carouselExampleControls"
-                class="carousel slide"
+                class="carousel slide index_slider"
                 data-ride="carousel"
               >
                 <div class="carousel-inner">
