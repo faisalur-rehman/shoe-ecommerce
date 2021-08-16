@@ -197,7 +197,7 @@ header .insta_icon i {
   margin-bottom: 20px;
   align-items: center;
 }
-.single_sneaker_buy_button a {
+.single_sneaker_buy_button button {
   width: 127px;
   height: 39px;
   background: #9e9e9e;
@@ -524,4 +524,17 @@ header .insta_icon i {
   .responsive_nav_details_secion_three ul li {
     padding: 0px 15px;
   }
+}
+.raffle_size {
+  margin-bottom: 10px;
+}
+.raffle_size input {
+  background-color: #c0c0c0;
+  border: 1px solid black;
+  outline: none;
+}
+.raffle_size select {
+  background-color: #c0c0c0;
+  border: 1px solid black;
+  outline: none;
 }

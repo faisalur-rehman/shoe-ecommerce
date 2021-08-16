@@ -89,30 +89,34 @@ function FormFields({ state, handleClose, handleClick, data, error }) {
                   </Field>
                 </div>
                 <div class="raffle_purchase_form_input_field">
-                  <label>Shipping Address</label>
-                  <br />
-                  <Field
-                    name="shippingAddress"
-                    type="text"
-                    placeholder=""
-                    className="form-control"
-                  />
+                  <div class="raffle_size">
+                    <label>Shipping Address</label>
+                    <br />
+                    <Field
+                      name="shippingAddress"
+                      type="text"
+                      placeholder=""
+                      className="form-control"
+                    />
+                  </div>
                 </div>
                 <div class="raffle_purchase_form_input_field">
-                  <label>Shipping State</label>
-                  <br />
-                  <Field
-                    as="select"
-                    name="shippingState"
-                    className="form-control"
-                  >
-                    <option value="" selected disabled>
-                      Select
-                    </option>
+                  <div class="raffle_size">
+                    <label>Shipping State</label>
+                    <br />
+                    <Field
+                      as="select"
+                      name="shippingState"
+                      className="form-control"
+                    >
+                      <option value="" selected disabled>
+                        Select
+                      </option>
 
-                    <option value="Switzerland">Switzerland</option>
-                    <option value="Liechtenstein">Liechtenstein</option>
-                  </Field>
+                      <option value="Switzerland">Switzerland</option>
+                      <option value="Liechtenstein">Liechtenstein</option>
+                    </Field>
+                  </div>
                 </div>
               </div>
               <p style={{ color: "red" }}>{error.data && error.data.message}</p>

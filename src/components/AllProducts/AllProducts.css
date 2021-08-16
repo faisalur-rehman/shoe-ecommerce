@@ -170,12 +170,13 @@ header .insta_icon i {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 15px 0;
 }
 .single_sneaker p {
-  padding-bottom: 5px;
   font-size: 18px;
   line-height: 20px;
   color: #000000;
+  margin: 0;
 }
 .single_sneaker small {
   font-size: 18px;
