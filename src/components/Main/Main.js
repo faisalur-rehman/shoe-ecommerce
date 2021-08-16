@@ -126,12 +126,12 @@ const Main = () => {
             </div>
           </div>
           <div class="mobile_explore">
-            <a href="sneaker.html">
+            <Link to="/allProducts">
               <span>explore new sneakers</span>
               <div class="figure">
                 <img src={homeArrow} alt="" />
               </div>
-            </a>
+            </Link>
           </div>
         </div>
 
