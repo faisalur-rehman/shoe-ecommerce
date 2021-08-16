@@ -96,18 +96,29 @@ const Conditions = () => {
       </section>
 
       <section class="Mobile_home_section">
-        <div class="mobile_header">
+        <div
+          class="mobile_header"
+          style={{ backgroundColor: "black", borderColor: "white" }}
+        >
           <div class="shopping_cart">
-            <i class="fas fa-shopping-bag"></i>
+            <i class="fas fa-shopping-bag" style={{ color: "white" }}></i>
           </div>
           <div class="logo">
             <a href="index.html">
-              <img src={mobileLogo} alt="" />
+              <img
+                src={mobileLogo}
+                alt=""
+                style={{ backgroundColor: "white", borderRadius: "50%" }}
+              />
             </a>
           </div>
           <div class="nav_icon">
             <a class="open_close_nav">
-              <i class="fas fa-bars" onClick={handleClick}></i>
+              <i
+                class="fas fa-bars"
+                onClick={handleClick}
+                style={{ color: "white" }}
+              ></i>
             </a>
           </div>
         </div>
