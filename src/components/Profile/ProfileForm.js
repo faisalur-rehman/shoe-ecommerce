@@ -62,9 +62,9 @@ function FormFields({
               <h2>{profileData.name}</h2>
             </div>
             <div class="profile_nav">
-              <div class="profile_nav_list">
+              {/* <div class="profile_nav_list">
                 <Link to="/account">setting</Link>
-              </div>
+              </div> */}
               <div class="profile_nav_list">
                 <Link to="/myshoes">my shoes</Link>
               </div>
@@ -177,9 +177,9 @@ function FormFields({
             <h2>{profileData.name}</h2>
           </div>
           <div class="profile_nav">
-            <div class="profile_nav_list">
+            {/* <div class="profile_nav_list">
               <Link to="/account">setting</Link>
-            </div>
+            </div> */}
             <div class="profile_nav_list">
               <Link to="/myshoes">my shoes</Link>
             </div>

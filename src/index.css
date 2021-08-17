@@ -107,7 +107,7 @@ body {
   transition: 1s ease-in-out;
 }
 .slide_container {
-  max-width: 600px;
+  max-width: 750px;
   margin: 0 auto;
 }
 .carousel-control-next-icon {
@@ -132,6 +132,7 @@ body {
 }
 .index_slider {
   display: flex !important;
+  margin-left: 30px;
 }
 .carousel-control-next-icon {
   width: 100% !important;
@@ -404,6 +405,7 @@ header .insta_icon i {
 }
 .explore_new figure {
   position: relative;
+  text-align: left;
 }
 .explore_new figure:after {
   position: absolute;
@@ -413,7 +415,7 @@ header .insta_icon i {
   top: -1px;
   border-radius: 50px;
   opacity: 0.5;
-  right: -9px;
+  left: 81px;
 }
 
 /* home_page_body end */
@@ -608,7 +610,7 @@ width: 100%;
 }
 @media (max-width: 767px) {
   header {
-    margin-right: 30px;
+    /* margin-right: 30px; */
   }
   /* header{
       height: 100%;

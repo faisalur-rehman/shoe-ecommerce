@@ -54,7 +54,7 @@ const ResponsiveNavbar = ({ state, handleClose }) => {
                 </p>
                 <p>
                   {" "}
-                  <Link to="/account">Account</Link>
+                  <Link to="/profile">Account</Link>
                 </p>
               </>
             )}

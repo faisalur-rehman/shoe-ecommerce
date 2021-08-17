@@ -27,12 +27,12 @@ const MyShoesScreen = ({ data, profileData }) => {
           <section class="myshoes_body">
             <div class="myshoes_nav_section">
               <div class="myshoes_page_list">
-                <h2>{profileData.name}</h2>
+                <h2>{profileData && profileData.name}</h2>
               </div>
               <div class="myshoes_nav">
-                <div class="myshoes_nav_list">
+                {/* <div class="myshoes_nav_list">
                   <Link to="/account">setting</Link>
-                </div>
+                </div> */}
                 <div class="myshoes_nav_list">
                   <Link to="/myshoes">my shoes</Link>
                 </div>
@@ -83,7 +83,10 @@ const MyShoesScreen = ({ data, profileData }) => {
                         </div>
                       ))
                     ) : (
-                      <p>No Order History Found</p>
+                      <div className="all-shoes">
+                        <p>Buy Some Limited Sneakers.</p>
+                        <Link to="/allProducts">Buy Sneakers</Link>
+                      </div>
                     )}
                   </div>
                 </div>
@@ -111,12 +114,12 @@ const MyShoesScreen = ({ data, profileData }) => {
         </div>
         <div class="myshoes_nav_section">
           <div class="myshoes_page_list">
-            <h2>{profileData.name}</h2>
+            <h2>{profileData && profileData.name}</h2>
           </div>
           <div class="myshoes_nav">
-            <div class="myshoes_nav_list">
+            {/* <div class="myshoes_nav_list">
               <Link to="/account">setting</Link>
-            </div>
+            </div> */}
             <div class="myshoes_nav_list">
               <Link to="/myshoes">my shoes</Link>
             </div>
@@ -147,7 +150,10 @@ const MyShoesScreen = ({ data, profileData }) => {
                     <div class="myshoes_page_labels_fields" key={order._id}>
                       <div class="myshoes_name_field">
                         <figure>
-                          <img src={singleShoe} alt="" />
+                          <img
+                            src={`https://shoe-e-store-restapi.herokuapp.com/${order.image}`}
+                            alt=""
+                          />
                         </figure>
                         <div class="myshoes_name_field_detail">
                           <small>jordan 1 retro high</small>
@@ -163,7 +169,10 @@ const MyShoesScreen = ({ data, profileData }) => {
                     </div>
                   ))
                 ) : (
-                  <p>No Order History Found</p>
+                  <div className="all-shoes">
+                    <p>Buy Some Limited Sneakers.</p>
+                    <Link to="/allProducts">Buy Sneakers</Link>
+                  </div>
                 )}
               </div>
             </div>

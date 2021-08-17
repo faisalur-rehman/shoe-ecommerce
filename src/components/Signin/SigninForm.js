@@ -89,7 +89,7 @@ function FormFields({ state, handleClose, handleClick, response, error }) {
                     <span>new to ryhl?</span>
                   </div>
                   <div class="submit_btn">
-                    <a href="sign_up.html">create account</a>
+                    <Link to="/signup">create account</Link>
                   </div>
                 </div>
               </div>
@@ -138,7 +138,7 @@ function FormFields({ state, handleClose, handleClick, response, error }) {
                   <span>new to ryhl?</span>
                 </div>
                 <div class="submit_btn">
-                  <Link to="signup">create account</Link>
+                  <Link to="/signup">create account</Link>
                 </div>
               </div>
             </div>
