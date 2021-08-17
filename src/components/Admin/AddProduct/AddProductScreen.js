@@ -97,7 +97,6 @@ function FormFields({ handleImage, response }) {
                           type="checkbox"
                           name="availableSizes"
                           value="6"
-                          required
                         />
                         6
                       </label>

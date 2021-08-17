@@ -24,7 +24,10 @@ const AddProduct = () => {
     formData.append("image", file);
     formData.append("releaseDate", formValues.releaseDate);
     formData.append("description", formValues.description);
-    formData.append("availableSizes", formValues.availableSizes);
+    formData.append(
+      "availableSizes",
+      JSON.stringify(formValues.availableSizes)
+    );
     formData.append("type", formValues.type);
     formData.append("style", formValues.style);
     formData.append("name", formValues.name);
