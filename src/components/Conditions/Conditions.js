@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import Sidebar from "../Sidebar/Sidebar";
 import mobileLogo from "../../image/mobile_logo.png";
 import "./Conditions.css";
 import ResponsiveNavbar from "../ResponsiveNavbar/ResponsiveNavbar";
 import PrivacyHeader from "../PrivacyHeader/PrivacyHeader";
 import MoreConditions from "../MoreConditions/MoreConditions";
 import { animateScroll as scroll } from "react-scroll";
+import { Link } from "react-router-dom";
 
 const Conditions = () => {
   const [state, setstate] = useState("");
@@ -125,15 +125,9 @@ const Conditions = () => {
               </div>
 
               <div class="agb_down_arrow">
-                <a>
-                  <i
-                    class="fas fa-angle-double-down"
-                    onClick={handleArrowClick}
-                  ></i>
-                </a>
-              </div>
-              <div className={`${morePrivacy}`}>
-                <MoreConditions />
+                <Link to="/more-conditions">
+                  <i class="fas fa-angle-double-down"></i>
+                </Link>
               </div>
             </div>
           </section>
@@ -225,15 +219,9 @@ const Conditions = () => {
             </div>
 
             <div class="agb_down_arrow">
-              <a>
-                <i
-                  class="fas fa-angle-double-down"
-                  onClick={handleMobileArrowClick}
-                ></i>
-              </a>
-            </div>
-            <div className={`${morePrivacy}`}>
-              <MoreConditions />
+              <Link to="/more-conditions">
+                <i class="fas fa-angle-double-down"></i>
+              </Link>
             </div>
           </div>
         </section>

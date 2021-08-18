@@ -8,6 +8,7 @@ import MorePrivacy from "../MorePrivacy/MorePrivacy";
 import { useRef } from "react";
 // import { Link } from "react-router-dom";
 import { animateScroll as scroll } from "react-scroll";
+import { Link } from "react-router-dom";
 
 const Privacy = () => {
   const [state, setstate] = useState("");
@@ -120,15 +121,12 @@ const Privacy = () => {
               </div>
 
               <div class="privacy_down_arrow">
-                <a>
+                <Link to="/more-privacy">
                   <i
                     class="fas fa-angle-double-down"
-                    onClick={handleArrowClick}
+                    // onClick={handleArrowClick}
                   ></i>
-                </a>
-              </div>
-              <div className={`${morePrivacy}`}>
-                <MorePrivacy />
+                </Link>
               </div>
             </div>
           </section>
@@ -242,15 +240,12 @@ const Privacy = () => {
             </div>
 
             <div class="privacy_down_arrow">
-              <a>
+              <Link to="/more-privacy">
                 <i
                   class="fas fa-angle-double-down"
-                  onClick={handleMobileArrowClick}
+                  // onClick={handleMobileArrowClick}
                 ></i>
-              </a>
-            </div>
-            <div id="mobile-privacy" ref={ref} className={`${morePrivacy}`}>
-              <MorePrivacy />
+              </Link>
             </div>
           </div>
         </section>

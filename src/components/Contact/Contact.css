@@ -482,7 +482,7 @@ header .insta_icon i {
 }
 .responsive_nav_details_secion_two ul li a:hover {
   opacity: 1;
-  padding-right: 5px;
+  /* padding-right: 5px; */
   transition: 0.2s ease-in-out;
 }
 
@@ -512,7 +512,7 @@ header .insta_icon i {
 }
 .responsive_nav_details_secion_three ul li a:hover {
   opacity: 1;
-  padding-right: 5px;
+  /* padding-right: 5px; */
   transition: 0.2s ease-in-out;
 }
 

@@ -90,10 +90,14 @@ const ResponsiveNavbar = ({ state, handleClose }) => {
           <div class="responsive_nav_details_secion_three">
             <ul>
               <li>
-                <Link to="/privacy">privacy</Link>
+                <Link to="/privacy" style={{ opacity: 0.9 }}>
+                  privacy
+                </Link>
               </li>
               <li>
-                <Link to="/conditions">agb</Link>
+                <Link to="/conditions" style={{ opacity: 0.9 }}>
+                  agb
+                </Link>
               </li>
             </ul>
           </div>

@@ -26,6 +26,8 @@ import OrderHistory from "./components/Admin/OrderHistory/OrderHistory";
 import AdminRaffleProduct from "./components/Admin/AdminRaffleProduct/AdminRaffleProduct";
 import UpdateProduct from "./components/Admin/UpdateProduct/UpdateProduct";
 import UserRaffle from "./components/UserRaffle/UserRaffle";
+import MorePrivacy from "./components/MorePrivacy/MorePrivacy";
+import MoreConditions from "./components/MoreConditions/MoreConditions";
 
 function App() {
   return (
@@ -77,6 +79,12 @@ function App() {
           </Route>
           <Route path="/privacy">
             <Privacy />
+          </Route>
+          <Route path="/more-privacy">
+            <MorePrivacy />
+          </Route>
+          <Route path="/more-conditions">
+            <MoreConditions />
           </Route>
           <Route path="/conditions">
             <Conditions />

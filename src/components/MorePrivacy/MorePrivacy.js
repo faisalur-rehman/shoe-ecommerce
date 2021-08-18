@@ -1,15 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
+import PrivacyHeader from "../PrivacyHeader/PrivacyHeader";
+import ResponsiveNavbar from "../ResponsiveNavbar/ResponsiveNavbar";
+import mobileLogo from "../../image/mobile_logo.png";
 
 const MorePrivacy = () => {
+  const [state, setstate] = useState("");
+  function handleClick() {
+    setstate("responsive_bar");
+  }
+  function handleClose() {
+    setstate("");
+  }
   return (
     <div>
       <section id="greater_then_mobile">
-        <section>
+        <section class="privacy_page_section">
+          <PrivacyHeader
+            state={state}
+            handleClick={handleClick}
+            handleClose={handleClose}
+          />
           <section
             class="privacy_body_section"
             style={{ backgroundColor: "black" }}
           >
             <div class="privacy_container">
+              <div class="privacy_section_heading">
+                <h3>privacy</h3>
+              </div>
               <div class="privacy_section_contact_detail">
                 <div class="privacy_section_contact_fields">
                   <p class="privacy_red_color">
@@ -89,6 +107,33 @@ const MorePrivacy = () => {
       </section>
 
       <section class="Mobile_home_section">
+        <div
+          class="mobile_header"
+          style={{ backgroundColor: "black", borderColor: "white" }}
+        >
+          <div class="shopping_cart">
+            <i class="fas fa-shopping-bag" style={{ color: "white" }}></i>
+          </div>
+          <div class="logo">
+            <a href="index.html">
+              <img
+                src={mobileLogo}
+                alt=""
+                style={{ backgroundColor: "white", borderRadius: "50%" }}
+              />
+            </a>
+          </div>
+          <div class="nav_icon">
+            <a class="open_close_nav">
+              <i
+                class="fas fa-bars"
+                onClick={handleClick}
+                style={{ color: "white" }}
+              ></i>
+            </a>
+          </div>
+        </div>
+
         <section
           class="privacy_body_section"
           style={{ backgroundColor: "black" }}
@@ -169,6 +214,7 @@ const MorePrivacy = () => {
           </div>
         </section>
       </section>
+      <ResponsiveNavbar state={state} handleClose={handleClose} />
     </div>
   );
 };
