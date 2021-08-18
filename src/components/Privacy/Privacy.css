@@ -444,3 +444,12 @@ header .insta_icon i {
     padding: 0px 15px;
   }
 }
+.more-privacy {
+  animation: fadein 3s;
+  -moz-animation: fadein 3s; /* Firefox */
+  -webkit-animation: fadein 3s; /* Safari and Chrome */
+  -o-animation: fadein 3s; /* Opera */
+}
+.no-privacy {
+  display: none;
+}

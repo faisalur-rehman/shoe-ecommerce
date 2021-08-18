@@ -1,48 +1,15 @@
-import React, { useState } from "react";
-import Sidebar from "../Sidebar/Sidebar";
-import mobileLogo from "../../image/mobile_logo.png";
-import "./Conditions.css";
-import ResponsiveNavbar from "../ResponsiveNavbar/ResponsiveNavbar";
-import PrivacyHeader from "../PrivacyHeader/PrivacyHeader";
-import MoreConditions from "../MoreConditions/MoreConditions";
-import { animateScroll as scroll } from "react-scroll";
+import React from "react";
 
-const Conditions = () => {
-  const [state, setstate] = useState("");
-  const [morePrivacy, setMorePrivacy] = useState("no-conditions");
-  function handleClick() {
-    setstate("responsive_bar");
-  }
-  function handleClose() {
-    setstate("");
-  }
-  function handleArrowClick() {
-    setMorePrivacy("more-conditions");
-    window.scrollTo(0, 300);
-    // scroll.scrollToBottom();
-  }
-  function handleMobileArrowClick() {
-    setMorePrivacy("more-conditions");
-    scroll.scrollToBottom();
-  }
+const MoreConditions = () => {
   return (
     <div>
       <section id="greater_then_mobile">
-        <section class="agb_page_section">
-          <PrivacyHeader
-            state={state}
-            handleClick={handleClick}
-            handleClose={handleClose}
-          />
-
+        <section>
           <section
             class="agb_body_section"
             style={{ backgroundColor: "black" }}
           >
             <div class="agb_container">
-              <div class="agb_section_heading">
-                <h3>agb</h3>
-              </div>
               <div class="agb_section_contact_detail">
                 <div class="agb_section_contact_fields">
                   <p class="agb_red_color">§ 1 geltungsbereich, kunden</p>
@@ -95,29 +62,6 @@ const Conditions = () => {
                     Zahlungsvorgangs.
                   </p>
                 </div>
-                <div class="agb_section_contact_fields">
-                  <p>
-                    Die Bezahlung der vom Kunden bestellten Ware erfolgt per
-                    PayPal, per Kreditkarte, Google Pay oder Apple Pay. Die
-                    Zahlungen des Kunden sind, sofern im Folgenden nicht anders
-                    angegeben, spätestens innerhalb von 14 Tagen nach
-                    Vertragsschluss fällig. Die Belastung des Kontos des Kunden
-                    erfolgt im Anschluss an die Durchführung des
-                    Zahlungsvorgangs.
-                  </p>
-                </div>
-              </div>
-
-              <div class="agb_down_arrow">
-                <a>
-                  <i
-                    class="fas fa-angle-double-down"
-                    onClick={handleArrowClick}
-                  ></i>
-                </a>
-              </div>
-              <div className={`${morePrivacy}`}>
-                <MoreConditions />
               </div>
             </div>
           </section>
@@ -125,38 +69,8 @@ const Conditions = () => {
       </section>
 
       <section class="Mobile_home_section">
-        <div
-          class="mobile_header"
-          style={{ backgroundColor: "black", borderColor: "white" }}
-        >
-          <div class="shopping_cart">
-            <i class="fas fa-shopping-bag" style={{ color: "white" }}></i>
-          </div>
-          <div class="logo">
-            <a href="index.html">
-              <img
-                src={mobileLogo}
-                alt=""
-                style={{ backgroundColor: "white", borderRadius: "50%" }}
-              />
-            </a>
-          </div>
-          <div class="nav_icon">
-            <a class="open_close_nav">
-              <i
-                class="fas fa-bars"
-                onClick={handleClick}
-                style={{ color: "white" }}
-              ></i>
-            </a>
-          </div>
-        </div>
-
         <section class="agb_body_section" style={{ backgroundColor: "black" }}>
           <div class="agb_container">
-            <div class="agb_section_heading">
-              <h3>agb</h3>
-            </div>
             <div class="agb_section_contact_detail">
               <div class="agb_section_contact_fields">
                 <p class="agb_red_color">§ 1 geltungsbereich, kunden</p>
@@ -207,25 +121,11 @@ const Conditions = () => {
                 </p>
               </div>
             </div>
-
-            <div class="agb_down_arrow">
-              <a>
-                <i
-                  class="fas fa-angle-double-down"
-                  onClick={handleMobileArrowClick}
-                ></i>
-              </a>
-            </div>
-            <div className={`${morePrivacy}`}>
-              <MoreConditions />
-            </div>
           </div>
         </section>
       </section>
-
-      <ResponsiveNavbar state={state} handleClose={handleClose} />
     </div>
   );
 };
 
-export default Conditions;
+export default MoreConditions;

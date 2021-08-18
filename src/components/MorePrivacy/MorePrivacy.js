@@ -1,50 +1,15 @@
-import React, { useState } from "react";
-import Sidebar from "../Sidebar/Sidebar";
-import "./Privacy.css";
-import mobileLogo from "../../image/mobile_logo.png";
-import ResponsiveNavbar from "../ResponsiveNavbar/ResponsiveNavbar";
-import PrivacyHeader from "../PrivacyHeader/PrivacyHeader";
-import MorePrivacy from "../MorePrivacy/MorePrivacy";
-import { useRef } from "react";
-// import { Link } from "react-router-dom";
-import { animateScroll as scroll } from "react-scroll";
+import React from "react";
 
-const Privacy = () => {
-  const [state, setstate] = useState("");
-  const [morePrivacy, setMorePrivacy] = useState("no-privacy");
-  const ref = useRef();
-  // const privacy = morePrivacy ? "more-privacy" : "no-privacy";
-  function handleClick() {
-    setstate("responsive_bar");
-  }
-  function handleClose() {
-    setstate("");
-  }
-  function handleArrowClick() {
-    window.scrollTo(0, 300);
-    setMorePrivacy("more-privacy");
-  }
-  function handleMobileArrowClick() {
-    setMorePrivacy("more-privacy");
-    scroll.scrollToBottom();
-  }
+const MorePrivacy = () => {
   return (
     <div>
       <section id="greater_then_mobile">
-        <section class="privacy_page_section">
-          <PrivacyHeader
-            state={state}
-            handleClick={handleClick}
-            handleClose={handleClose}
-          />
+        <section>
           <section
             class="privacy_body_section"
             style={{ backgroundColor: "black" }}
           >
             <div class="privacy_container">
-              <div class="privacy_section_heading">
-                <h3>privacy</h3>
-              </div>
               <div class="privacy_section_contact_detail">
                 <div class="privacy_section_contact_fields">
                   <p class="privacy_red_color">
@@ -118,51 +83,12 @@ const Privacy = () => {
                   </p>
                 </div>
               </div>
-
-              <div class="privacy_down_arrow">
-                <a>
-                  <i
-                    class="fas fa-angle-double-down"
-                    onClick={handleArrowClick}
-                  ></i>
-                </a>
-              </div>
-              <div className={`${morePrivacy}`}>
-                <MorePrivacy />
-              </div>
             </div>
           </section>
         </section>
       </section>
 
       <section class="Mobile_home_section">
-        <div
-          class="mobile_header"
-          style={{ backgroundColor: "black", borderColor: "white" }}
-        >
-          <div class="shopping_cart">
-            <i class="fas fa-shopping-bag" style={{ color: "white" }}></i>
-          </div>
-          <div class="logo">
-            <a href="index.html">
-              <img
-                src={mobileLogo}
-                alt=""
-                style={{ backgroundColor: "white", borderRadius: "50%" }}
-              />
-            </a>
-          </div>
-          <div class="nav_icon">
-            <a class="open_close_nav">
-              <i
-                class="fas fa-bars"
-                onClick={handleClick}
-                style={{ color: "white" }}
-              ></i>
-            </a>
-          </div>
-        </div>
-
         <section
           class="privacy_body_section"
           style={{ backgroundColor: "black" }}
@@ -240,25 +166,11 @@ const Privacy = () => {
                 </p>
               </div>
             </div>
-
-            <div class="privacy_down_arrow">
-              <a>
-                <i
-                  class="fas fa-angle-double-down"
-                  onClick={handleMobileArrowClick}
-                ></i>
-              </a>
-            </div>
-            <div id="mobile-privacy" ref={ref} className={`${morePrivacy}`}>
-              <MorePrivacy />
-            </div>
           </div>
         </section>
       </section>
-
-      <ResponsiveNavbar state={state} handleClose={handleClose} />
     </div>
   );
 };
 
-export default Privacy;
+export default MorePrivacy;

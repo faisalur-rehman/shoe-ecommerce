@@ -49,9 +49,9 @@ const ResponsiveNavbar = ({ state, handleClose }) => {
             </p>
             {localStorage.getItem("token") && (
               <>
-                <p>
+                {/* <p>
                   <Link to="/user-raffle">YOUR RAFFLE</Link>
-                </p>
+                </p> */}
                 <p>
                   {" "}
                   <Link to="/profile">Account</Link>
