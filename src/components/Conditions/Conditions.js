@@ -17,9 +17,8 @@ const Conditions = () => {
     setstate("");
   }
   function handleArrowClick() {
+    scroll.scrollToBottom();
     setMorePrivacy("more-conditions");
-    window.scrollTo(0, 300);
-    // scroll.scrollToBottom();
   }
   function handleMobileArrowClick() {
     setMorePrivacy("more-conditions");
@@ -76,6 +75,23 @@ const Conditions = () => {
                     eines Kunden annimmt. Bei Schreib- und Rechenfehlern sowie
                     Irrtümern auf der Internetseite behält sich das Unternehmen
                     das Recht vor, eine Bestellung nicht anzunehmen.
+                  </p>
+                </div>
+                <div class="agb_section_contact_fields">
+                  <p class="agb_red_color">
+                    § 3 Zahlungsbedingungen und Preise
+                  </p>
+                </div>
+
+                <div class="agb_section_contact_fields">
+                  <p>
+                    Die Bezahlung der vom Kunden bestellten Ware erfolgt per
+                    PayPal, per Kreditkarte, Google Pay oder Apple Pay. Die
+                    Zahlungen des Kunden sind, sofern im Folgenden nicht anders
+                    angegeben, spätestens innerhalb von 14 Tagen nach
+                    Vertragsschluss fällig. Die Belastung des Kontos des Kunden
+                    erfolgt im Anschluss an die Durchführung des
+                    Zahlungsvorgangs.
                   </p>
                 </div>
                 <div class="agb_section_contact_fields">

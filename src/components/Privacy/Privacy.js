@@ -21,7 +21,7 @@ const Privacy = () => {
     setstate("");
   }
   function handleArrowClick() {
-    window.scrollTo(0, 300);
+    scroll.scrollToBottom();
     setMorePrivacy("more-privacy");
   }
   function handleMobileArrowClick() {

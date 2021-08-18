@@ -107,6 +107,22 @@ const MoreConditions = () => {
                 </p>
               </div>
               <div class="agb_section_contact_fields">
+                <p class="agb_red_color">
+                  § 2 Angebote und Vertragsschluss über die Internetseite des
+                  Unternehmens
+                </p>
+              </div>
+              <div class="agb_section_contact_fields">
+                <p>
+                  Alle Angebote des Unternehmens sind freibleibend und
+                  unverbindlich. Ein Vertrag zwischen dem Unternehmen und dem
+                  Kunden kommt erst zustande, wenn das Unternehmen ein Angebot
+                  eines Kunden annimmt. Bei Schreib- und Rechenfehlern sowie
+                  Irrtümern auf der Internetseite behält sich das Unternehmen
+                  das Recht vor, eine Bestellung nicht anzunehmen.
+                </p>
+              </div>
+              <div class="agb_section_contact_fields">
                 <p class="agb_red_color">§ 3 Zahlungsbedingungen und Preise</p>
               </div>
 
